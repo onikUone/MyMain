@@ -9,8 +9,8 @@
  + Objective Num : int
  + Emo Type : index
  + Cross Validation Num : int
- + Repeat Times : int
  + Start Repeat Position : int
+ + Fisnish Repeat Position : int
  + seed : int
  + preDivNum : int
  + isOnceExe : boolean
@@ -32,3 +32,9 @@
  + Island Num : int
  + Node Names[0] : String
  + Node Names[1] : String
+
+## resultディレクトリ
+
+ + datasetName.txt
+
+ 実験パラメータが出力されている
