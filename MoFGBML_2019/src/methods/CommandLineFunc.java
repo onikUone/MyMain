@@ -14,8 +14,8 @@ public class CommandLineFunc {
 			System.out.println("4 Objectives: int");
 			System.out.println("5 EmoAlgolithm: int (0:NSGAII, 1:WS, 2:TCH, 3:PBI, 4:IPBI, 5:AOF");
 			System.out.println("6 CV: int");
-			System.out.println("7 Repeat times: int");
-			System.out.println("8 Start Repeat Position: int");
+			System.out.println("7 Start Repeat Position: int");
+			System.out.println("8 Finish Repeat Position: int");
 			System.out.println("9 Seed: int");
 			System.out.println("10 PreDivNum: int");
 			System.out.println("11 One: boolean");

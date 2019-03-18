@@ -30,8 +30,8 @@ public class Settings {
 	int objectiveNum = 2;	//目的数
 	int emoType = 0;	//EMOA (0: NSGA-II, 1:WS, 2:TCH, 3:PBI, 4:IPBI, 5:AOF)
 	int crossValidationNum = 1;	// x-CrossValidation
-	int repeatTimes = 1;	//CVの繰り返し回数
 	int startRepeatPos = 0;	//CVの繰り返しのスタート位置
+	int finishRepeatPos = 1;	//CVの繰り返しのストップ位置
 	int seed = 2019;	//乱数シード値
 	int preDivNum = 1;	//プレサンプリングの分割数
 	boolean isOnceExe = true;	//CVの試行終了タイミング（true:1回ずつ試行を終了させる）
@@ -82,8 +82,8 @@ public class Settings {
 		objectiveNum = Integer.parseInt(args[4]);
 		emoType = Integer.parseInt(args[5]);
 		crossValidationNum = Integer.parseInt(args[6]);
-		repeatTimes = Integer.parseInt(args[7]);
-		startRepeatPos = Integer.parseInt(args[8]);
+		startRepeatPos = Integer.parseInt(args[7]);
+		finishRepeatPos = Integer.parseInt(args[8]);
 		seed = Integer.parseInt(args[9]);
 		preDivNum = Integer.parseInt(args[10]);
 		isOnceExe = Boolean.parseBoolean(args[11]);
