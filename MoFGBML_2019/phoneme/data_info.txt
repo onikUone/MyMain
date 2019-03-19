@@ -1,0 +1,32 @@
+Aa: real	 Min=-1.7, Max=4.107 
+Ao: real	 Min=-1.327, Max=4.378 
+Dcl: real	 Min=-1.823, Max=3.199 
+Iy: real	 Min=-1.581, Max=2.826 
+Sh: real	 Min=-1.284, Max=2.719 
+Class 0: 3818, Class 1: 1586, 
+Class '0' represents '0'
+Class '1' represents '1'
+# of patterns: 5404, # of attributes: 5, # of classes: 2
+# of patterns with missing attribute(s): 0
+
+# of patterns for each class per partition
+0 - tra: 3436	 1427	 Total: 4863
+0 - tst: 382	 159	 Total: 541
+1 - tra: 3436	 1427	 Total: 4863
+1 - tst: 382	 159	 Total: 541
+2 - tra: 3436	 1427	 Total: 4863
+2 - tst: 382	 159	 Total: 541
+3 - tra: 3436	 1427	 Total: 4863
+3 - tst: 382	 159	 Total: 541
+4 - tra: 3436	 1428	 Total: 4864
+4 - tst: 382	 158	 Total: 540
+5 - tra: 3436	 1428	 Total: 4864
+5 - tst: 382	 158	 Total: 540
+6 - tra: 3436	 1428	 Total: 4864
+6 - tst: 382	 158	 Total: 540
+7 - tra: 3436	 1428	 Total: 4864
+7 - tst: 382	 158	 Total: 540
+8 - tra: 3437	 1427	 Total: 4864
+8 - tst: 381	 159	 Total: 540
+9 - tra: 3437	 1427	 Total: 4864
+9 - tst: 381	 159	 Total: 540

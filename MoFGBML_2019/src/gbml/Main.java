@@ -1,11 +1,17 @@
 package gbml;
 
+import java.util.ArrayList;
 import java.util.Date;
 
+import methods.DataLoader;
+import methods.Divider;
 import methods.MersenneTwisterFast;
 import methods.Output;
 import methods.ResultMaster;
 import methods.StaticGeneralFunc;
+import moead.Moead;
+import nsga2.Nsga2;
+import time.TimeWatcher;
 
 public class Main {
 
@@ -49,7 +55,7 @@ public class Main {
 		}
 	}
 
-	//一回ごとに試行を終了する
+	//TODO 一回ごとに試行を終了する
 	static public void onceExection(Settings sets, String[] args) {
 
 	}
@@ -64,7 +70,7 @@ public class Main {
 		//データディレクトリを物理的に作成
 		String resultDir = null;
 		if(sets.calclationType == 1) {
-			//sparkあり
+			//TODO sparkあり
 		} else {
 			resultDir = Output.makeDirName(sets.dataName, sets.calclationType, sets.islandNum, sets.preDivNum, sets.seed);
 		}
@@ -97,6 +103,110 @@ public class Main {
 	static public void startExperiment(Settings sets, String traFile, String tstFile, MersenneTwisterFast rnd,
 			ResultMaster resultMaster, int crossValidationNum, int repeatNum, String nowTrainFile, String nowTestFile) {
 
+		// ********************************************************************
+		//Read DataSets
+		DataSetInfo originalTrainDataInfo = null;	//All of Train DataSet
+		if(sets.calclationType == 0) {
+			originalTrainDataInfo = new DataSetInfo();
+			DataLoader.inputFile(originalTrainDataInfo, nowTrainFile);
+		} else if(sets.calclationType == 1) {
+			//TODO Sparkあり ヘッダのみ読み込む
+		}
+
+		// ********************************************************************
+		//Sampling the Datas	データのサンプリング(並列分散処理 各マシン用)
+		//データをクラスごとに均等に分けて一部だけ取り出す
+		DataSetInfo trainDataInfo = new DataSetInfo();	//学習用データセット
+		if(sets.calclationType == 0) {
+			Divider preDivider = new Divider(sets.preDivNum);
+			trainDataInfo = preDivider.letsDivide(originalTrainDataInfo, 1, sets.serverList)[0];
+		} else if(sets.calclationType == 1) {
+			//TODO sparkあり
+		}
+
+		// ********************************************************************
+		//Island Model	島モデル
+		//Divide the Datas into Each Island	（各島へのデータの分割）
+		DataSetInfo[] trainDataInfos = null;	//各島ごとにDataSetInfoインスタンスを作成
+		if(sets.calclationType == 0) {
+			if(sets.islandNum == 1) {
+				//島分割なし
+				trainDataInfos = new DataSetInfo[2];	//島分割がある場合と同じ形式にするために重複させたままにする
+
+				boolean isRandom = Consts.IS_RANDOM_PATTERN_SELECT;	//ランダムなパターンで組むか
+				DataSetInfo[] randomTrains = null;
+				if(isRandom) {
+					//TODO ランダムなパターンで組む？
+//					Divider divider = new Divider(rnd, sets.migrationItv);
+				} else {
+					//島分割がある場合と同様に扱うために、島用DataSetInfo[0]と最後にオリジナルなDataSetInfo[islandNum]の形式にする
+					trainDataInfos[0] = trainDataInfo;
+					trainDataInfos[1] = trainDataInfo;
+				}
+				trainDataInfos[0].setSetting(sets.calclationType, sets.serverList);
+				trainDataInfos[1].setSetting(sets.calclationType, sets.serverList);
+			} else {
+				//島分割あり
+				Divider divider = new Divider(rnd, sets.islandNum);
+				trainDataInfos = divider.letsDivide(trainDataInfo, sets.calclationType, sets.serverList);
+			}
+		} else {
+			//sparkあり
+		}
+
+		// ********************************************************************
+		//TimeWatch Start	時間計測開始
+		TimeWatcher evaWatcher = new TimeWatcher();	//TODO
+		TimeWatcher timeWatcher = new TimeWatcher();	//実験全体のTimeWatcher
+		timeWatcher.start();
+
+		// ********************************************************************
+		//Initialize Instance of EMO Algorithms	（EMOアルゴリズムの初期化）
+		//TODO 全体用MOEA/D
+		Moead moead = null;	//TODO
+		ArrayList<Moead> moeads = null;
+
+		//NSGA-II
+		Nsga2 nsga2 = new Nsga2(sets.objectiveNum, rnd);
+
+		//GA(Genetic Algorithm)マネージャ
+		GaManager gaManager = new GaManager(sets.populationSize, nsga2, moeads, rnd, sets.forkJoinPool, sets.serverList, sets.serverNum,
+											sets.objectiveNum, sets.generationNum, sets.emoType, sets.islandNum, resultMaster, evaWatcher, sets.dataName);
+
+		//Execute GA. (GA実行)
+		//GA終了後の最終個体群の情報が[populationManagers]に保存される
+		PopulationManager[] populationManagers = gaManager.gaFrame(trainDataInfos, sets.migrationItv, sets.rotationItv, sets.calclationType, repeatNum, crossValidationNum);
+
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -33,7 +33,7 @@
  + Node Names[0] : String
  + Node Names[1] : String
 
-## resultディレクトリ
+## resultディレクトリについて
 
  + datasetName.txt
 
