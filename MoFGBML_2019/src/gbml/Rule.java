@@ -1,5 +1,7 @@
 package gbml;
 
+import java.util.concurrent.ForkJoinPool;
+
 import methods.MersenneTwisterFast;
 import methods.StaticFuzzyFunc;
 
@@ -34,13 +36,36 @@ public class Rule {
 
 	//Methods *************************************************
 
-	//ルール作成
+	//ルール配列初期化
 	public void geneMic() {
 		rule = new int[Ndim];
 	}
 
+	//前件部ルール生成
 	public void makeRuleSingle(Pattern line, MersenneTwisterFast rnd2) {
 		rule = StaticFuzzyFunc.selectSingle(line, Ndim, rnd2);
+	}
+
+	//ルール結論部 決定メソッド
+	public void calcRuleConc(DataSetInfo trainData, ForkJoinPool forkJoinPool) {
+		//trainDataから、このミシガン型ルールにおける各クラスに対する信頼度を計算
+		double[] trust = StaticFuzzyFunc.calcTrust(trainData, this.rule, trainData.getCnum(), forkJoinPool);
+		this.conclusion = StaticFuzzyFunc.calcConclusion(trust, trainData.getCnum());
+		this.cf = StaticFuzzyFunc.calcCf(this.conclusion, trust, trainData.getCnum());
+		this.ruleLength = ruleLengthCalc();
+	}
+
+
+
+	//ルール数の計算
+	public int ruleLengthCalc() {
+		int ans = 0;
+		for(int i = 0; i < this.Ndim; i++) {
+			if(rule[i] != 0) {
+				ans++;
+			}
+		}
+		return ans;
 	}
 	// ********************************************************
 }

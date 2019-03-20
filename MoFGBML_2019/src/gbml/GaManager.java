@@ -103,6 +103,7 @@ public class GaManager {
 		//Step 1. 個体群の初期化
 		if(calclationType == 0) {
 
+			//TODO 2019/03/19
 			popManagers = generateInitialPop(trainDataInfos, dataIdx, calclationType);
 
 		} else {	//分散の場合はオブジェクトを作るだけでルールは作成しない．

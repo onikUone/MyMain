@@ -60,6 +60,10 @@ public class DataSetInfo {
 		return this.patterns.get(_index);
 	}
 
+	public ArrayList<Pattern> getPattern() {
+		return this.patterns;
+	}
+
 	public InetSocketAddress[] getServerList() {
 		return this.serverList;
 	}

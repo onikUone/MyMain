@@ -89,7 +89,9 @@ public class RuleSet {
 				if(isHeuris) {	//ヒューリスティック生成法
 					//サンプリングしたパターンを用いてルールを生成
 					micRules.get(i).makeRuleSingle(trainDataInfo.getPattern(sampleNums[i]), uniqueRnd);
-					//TODO 2019/03/19
+					micRules.get(i).calcRuleConc(trainDataInfo, forkJoinPool);
+				} else {	//完全ランダム生成
+					//TODO 2019/03/20
 				}
 			}
 		} while( this.micRules.size() == 0 );
