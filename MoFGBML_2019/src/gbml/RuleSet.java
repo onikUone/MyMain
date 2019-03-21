@@ -228,6 +228,7 @@ public class RuleSet {
 		}
 		missPatterns.clear();
 		MissPatNum = 0;
+		confusionMatrix = new int[Cnum][Cnum];
 
 		int dataSize = dataSetInfo.getDataSize();
 		int ans = -1;
