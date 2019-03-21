@@ -131,8 +131,21 @@ public class GaManager {
 				timeWatcher.exitSuspend();
 			}
 
+			//GA操作
+			if(populationSize == 1) {
+				//ミシガン型FGBML
+//				michiganTypeGA(trainDataInfos[0], popManagers[0], gen_i);
+			} else {
+				if(calclationType == 1) {
+					//TODO sparkあり
+				} else {
+					if(emoType == 0 || objectiveNum == 1) {
+						times.add(nsga2Type2(trainDataInfos, popManagers, dataIdx, gen_i));	//NSGA-IIの実施
+						s
+					}
+				}
+			}
 
-			//TODO 2019/03/21
 		}
 
 
@@ -224,6 +237,8 @@ public class GaManager {
 		}
 	}
 
+
+
 	//途中結果保持メソッド
 	public void genCheck(int gen, int repeat, int cv, DataSetInfo[] trainDataInfos, PopulationManager[] popManagers) {
 		if( (gen+1) <= 10 ||
@@ -237,6 +252,26 @@ public class GaManager {
 		{
 //TODO 途中結果を保持するメソッド
 //TODO 上の保持するタイミングも後で変更
+		}
+	}
+
+	//NSGA-II 実行メソッド
+	protected double nsga2Type2(DataSetInfo[] trainDataInfos, PopulationManager[] popManagers, int[] dataIdx, int gen_i) {
+		//子個体生成
+		for(int island_i = 0; island_i < islandNum; island_i++) {
+			geneticOperation(trainDataInfos[dataIdx[island_i]], popManagers[island_i], forkJoinPool);
+		}
+	}
+
+	//
+	protected void geneticOperation(DataSetInfo trainDataInfo, PopulationManager popManager, ForkJoinPool forkJoinPool) {
+		int length = popManager.getIslandPopNum();
+		popManager.newRuleSets.clear();
+
+		for(int child_i = 0; child_i < length; child_i++) {
+			popManager.newRuleSetInit();
+			popManager.crossOverAndMichiganOpe(child_i, popManager.currentRuleSets.size(), forkJoinPool, trainDataInfo);
+			//TODO 2019/03/21 呼び出し元
 		}
 	}
 

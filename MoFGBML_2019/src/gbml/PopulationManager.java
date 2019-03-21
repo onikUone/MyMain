@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ForkJoinPool;
 
 import methods.MersenneTwisterFast;
+import methods.StaticGeneralFunc;
 import moead.Moead;
 import nsga2.Nsga2;
 
@@ -159,7 +160,48 @@ public class PopulationManager implements Serializable{
 		}
 	}
 
+	//[this.newRuleSets]をaddする
+	protected void newRuleSetInit() {
+		this.newRuleSets.add( new RuleSet(uniqueRnd, attributeNum, classNum, trainDataSize, testDataSize, objectiveNum) );
+	}
+
+	//親選択・交叉操作（Pittsburgh型遺伝操作 + Michigan操作）
+	protected void crossOverAndMichiganOpe(int newRuleSetsIdx, int popSize, ForkJoinPool forkJoinPool, DataSetInfo trainDataInfo) {
+		int mom, dad;
+		int Nmom, Ndad;
+
+		//親選択
+		mom = StaticGeneralFunc.binaryT4(currentRuleSets, uniqueRnd, popSize, objectiveNum);
+		dad = StaticGeneralFunc.binaryT4(currentRuleSets, uniqueRnd, popSize, objectiveNum);
+
+		//ルールの操作 (Michigan操作)
+		if(uniqueRnd.nextDouble() < (double)Consts.RULE_OPE_RT) {
+			RuleSet deep = new RuleSet(currentRuleSets.get(mom));
+			newRuleSets.get(newRuleSetsIdx).copyRuleSet(deep);
+			newRuleSets.get(newRuleSetsIdx).setRuleNum();
+
+			if(newRuleSets.get(newRuleSetsIdx).getRuleNum() != 0) {
+				boolean doHeuris = Consts.DO_HEURISTIC_GENERATION;
+				if(doHeuris) {
+					//
+					newRuleSets.get(newRuleSetsIdx).micGenHeuris(trainDataInfo, forkJoinPool);
+				} else {
+					newRuleSets.get(newRuleSetsIdx).micGenRandom();
+				}
+			}
+		} else {
+			//Pittsburgh型個体（＝識別器）の交叉操作
+			//TODO 2019/03/21
+		}
+
+
+	}
+
 	//GET SET Methods
+
+	public int getIslandPopNum() {
+		return this.islandPopNum;
+	}
 
 	public void setIslandPopNum(int _popNum) {
 		this.islandPopNum = _popNum;

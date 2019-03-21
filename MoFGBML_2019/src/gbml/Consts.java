@@ -24,6 +24,9 @@ public class Consts {
 	public static final double DONT_CARE_RT = 0.8;	//don't care適応確率
 	public static final boolean IS_PROBABILITY_DONT_CARE = false;	//don't careを確率で行う
 
+	public static final double RULE_OPE_RT = 0.5;	//Michigan適用確率
+	public static final double RULE_CROSS_RT = 0.9;	//Michigan交叉確率
+	public static final double RULE_CHANGE_RT = 0.2;	//ルール入れ替え割合
 	public static final boolean DO_LOG_PER_LOG = false;	//ログでログを出力
 
 	//NSGA-II's Parameters

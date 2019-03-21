@@ -2,6 +2,7 @@ package gbml;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 
 import methods.MersenneTwisterFast;
@@ -117,6 +118,23 @@ public class RuleSet {
 		}
 		this.MissPatNum = ruleSet.MissPatNum;
 	}
+
+	RuleSet(MersenneTwisterFast rnd, int Ndim, int Cnum, int DataSize, int DataSizeTst, int objectiveNum){
+		this.uniqueRnd = new MersenneTwisterFast( rnd.nextInt() );
+		this.Ndim = Ndim;
+		this.Cnum = Cnum;
+		this.DataSize = DataSize;
+		this.DataSizeTst = DataSizeTst;
+		this.confusionMatrix = new int[Cnum][Cnum];
+
+		this.evaflag = 0;
+		this.rank = 0;
+		this.crowding = 0;
+		this.vecNum = 0;
+		this.fitnesses = new double[objectiveNum];
+		this.firstobj = new double[objectiveNum];
+	}
+
 	// *******************************************************
 
 	//Methods ************************************************
@@ -314,6 +332,210 @@ public class RuleSet {
 		}
 	}
 
+	public void copyRuleSet(RuleSet ruleSet) {
+		this.uniqueRnd = new MersenneTwisterFast( ruleSet.uniqueRnd.nextInt() );
+		this.Ndim = ruleSet.Ndim;
+		this.Cnum = ruleSet.Cnum;
+		this.DataSize = ruleSet.DataSize;
+		this.DataSizeTst = ruleSet.DataSizeTst;
+
+		this.missRate = ruleSet.missRate;
+		this.ruleNum = ruleSet.ruleNum;
+		this.ruleLength = ruleSet.ruleLength;
+		this.fitness = ruleSet.fitness;
+
+		this.vecNum = ruleSet.vecNum;
+
+		this.evaflag = ruleSet.evaflag;
+		this.testMissRate = ruleSet.testMissRate;
+		this.rank = ruleSet.rank;
+		this.crowding = ruleSet.crowding;
+		this.fitnesses = Arrays.copyOf(ruleSet.fitnesses, ruleSet.fitnesses.length);
+		firstobj = Arrays.copyOf(ruleSet.firstobj, ruleSet.fitnesses.length);
+
+		Rule a;
+		this.micRules.clear();
+		for(int i=0; i<ruleSet.micRules.size(); i++){
+			a = new Rule( ruleSet.micRules.get(i) );
+			this.micRules.add(a);
+		}
+
+		if(ruleSet.missPatterns != null){
+			this.missPatterns = new ArrayList<Integer>();
+			for(int i=0; i<ruleSet.missPatterns.size(); i++){
+				this.missPatterns.add( ruleSet.missPatterns.get(i) );
+			}
+		}
+		this.MissPatNum = ruleSet.MissPatNum;
+
+	}
+
+	//Michigan型交叉操作（ヒューリスティック）
+	public void micGenHeuris(DataSetInfo trainDataInfo, ForkJoinPool forkJoinPool) {
+		//交叉個体数（ルールの20%）あるいは1個
+		int snum;
+		if(uniqueRnd.nextDouble() < (double)Consts.RULE_OPE_RT) {
+			snum = (int)( (ruleNum - 0.00001) * Consts.RULE_CHANGE_RT) + 1;
+		} else {
+			snum = 1;
+		}
+
+		//合計生成個体数
+		int heuNum, genNum = 0;
+		if(snum % 2 == 0) {
+			heuNum = snum/2;
+			genNum = snum/2;
+		} else {
+			int plus = uniqueRnd.nextInt(2);
+			heuNum = (snum - 1)/2 + plus;
+			genNum = snum - heuNum;
+		}
+
+		//ヒューリスティック生成の誤識別パターン
+		//足りない or 無い場合はランダムに追加
+		while(missPatterns.size() < heuNum) {
+			missPatterns.add( uniqueRnd.nextInt( trainDataInfo.getDataSize() ));
+		}
+
+		int[] missPatternsSampleIdx = new int[heuNum];
+		missPatternsSampleIdx = StaticGeneralFunc.sampringWithout(heuNum,  missPatterns.size(), uniqueRnd);
+
+		for(int gen_i = 0; gen_i < genNum; gen_i++) {
+			ruleCross(gen_i);
+		}
+	}
+
+	//Michigan型交叉操作（ランダム）
+	public void micGenRandom() {
+		//交叉個体数（全ルールの20%）あるいは1個
+		int snum;
+		if(uniqueRnd.nextDouble() < (double)Consts.RULE_OPE_RT) {
+			//Michigan型操作 適用確率
+			snum = (int)((ruleNum - 0.00001) * Consts.RULE_CHANGE_RT) + 1;
+		} else {
+			snum = 1;
+		}
+
+		//合計生成個体数
+		int heuNum, genNum = 0;
+		if(snum % 2 == 0) {
+			heuNum = snum/2;
+			genNum = snum/2;
+		} else {
+			int plus = uniqueRnd.nextInt(2);
+			heuNum = (snum - 1)/2 + plus;
+			genNum = snum - heuNum;
+		}
+
+		for(int i = 0; i < genNum; i++) {
+			ruleCross(i);
+		}
+		for(int i = genNum; i < snum; i++) {
+			randomGeneration(i);
+		}
+	}
+
+	//Michigan型ルール交叉
+	public void ruleCross(int num) {
+		newMicRules.add( new Rule(uniqueRnd, Ndim, Cnum, DataSize, DataSizeTst) );
+		newMicRules.get(num).geneMic();
+
+		//親個体選択（バイナリトーナメントは計算量が以上にかかるので，同じ結論部の個体同士で交叉，なければ諦める(ルール数回で)）
+		int mom = uniqueRnd.nextInt(ruleNum);
+		int dad = uniqueRnd.nextInt(ruleNum);
+		int count = 0;
+		while( micRules.get(dad).getConc() != micRules.get(mom).getConc() && count < ruleNum) {
+			dad = uniqueRnd.nextInt(ruleNum);
+			count++;
+		}
+
+		if(uniqueRnd.nextDouble() < Consts.RULE_CROSS_RT) {
+			//UX : Uniformity Crossover (一様交叉)
+			int k = 0;	//交叉
+			int k2 = 0;	//突然変異
+			int o = 0;
+			for(int n = 0; n < Ndim; n++) {
+				//交叉操作
+				k = uniqueRnd.nextInt(2);
+				if(k == 0) {
+					newMicRules.get(num).setRule(n, micRules.get(mom).getRule(n));
+				} else {
+					newMicRules.get(num).setRule(n, micRules.get(dad).getRule(n));
+				}
+				//突然変異操作
+				k2 = uniqueRnd.nextInt(Ndim);
+				if(k2 == 0) {
+					do {
+						o = uniqueRnd.nextInt(Consts.FUZZY_SET_NUM + 1);
+					} while(o == newMicRules.get(num).getRule(n));	//条件部が変わるまで突然変異させる
+					newMicRules.get(num).setRule(n, o);
+				}
+			}
+		} else {
+			//交叉なし → 突然変異のみ（ベースはmom）
+			int o = 0;
+			int k2 = 0;
+			for(int n = 0; n < Ndim; n++) {
+				newMicRules.get(num).setRule(num, micRules.get(mom).getRule(n));
+				k2 = uniqueRnd.nextInt(Ndim);
+				if(k2 == 0) {
+					do {
+						o = uniqueRnd.nextInt(Consts.FUZZY_SET_NUM + 1);
+					} while(o == newMicRules.get(num).getRule(n));
+				}
+			}
+		}
+
+		//子個体の結論部はmomに合わせる．ルール重みはランダムな割合で合計
+		double momRate = uniqueRnd.nextDouble();
+		double newCf = micRules.get(mom).getCf() * momRate + micRules.get(dad).getCf() * (1.0 - momRate);
+		newMicRules.get(num).makeRuleCross(micRules.get(mom).getConc(), newCf);
+	}
+
+	//
+	public void randomGeneration(int num) {
+		//足りていないクラスの個体生成を優先
+		//識別中のクラス判別
+		int noCla[] = calcNoClass();
+		newMicRules.add( new Rule(uniqueRnd, Ndim, Cnum, DataSize, DataSizeTst));
+		newMicRules.get(num).geneMic();
+		newMicRules.get(num).makeRuleRnd1(uniqueRnd);
+		if(noCla.length == 0) {
+			newMicRules.get(num).makeRuleRnd2();
+		} else {
+			newMicRules.get(num).makeRuleNoCla(noCla);
+		}
+	}
+
+	//結論部に存在しないクラスを返すメソッド
+	protected int[] calcNoClass() {
+		int[] haveClass = calcHaveClass();
+
+		List<Integer> noCla = new ArrayList<Integer>();
+		for(int class_i = 0; class_i < Cnum; class_i++) {
+			boolean isHave = false;
+			for(int have_i = 0; have_i < haveClass.length; have_i++) {
+				if(class_i == haveClass[have_i]) {
+					isHave = true;
+				}
+			}
+			if(!isHave) {
+				noCla.add(class_i);
+			}
+		}
+		int[] noClass = noCla.stream().mapToInt(s -> s).toArray();
+
+		return noClass;
+	}
+
+	protected int[] calcHaveClass() {
+		int[] noCla = micRules.stream()
+					.mapToInt(r -> r.getConc())
+					.distinct()
+					.sorted()
+					.toArray();
+		return noCla;
+	}
 
 	//GET SET Methods
 
@@ -335,6 +557,10 @@ public class RuleSet {
 
 	public double[] getFitnesses() {
 		return this.fitnesses;
+	}
+
+	public void setRuleNum() {
+		this.ruleNum = micRules.size();
 	}
 
 	public void setDataIdx(int dataIdx) {
@@ -379,6 +605,10 @@ public class RuleSet {
 		for(int i = 1; i < fitnesses.length; i++) {
 			this.firstobj[i] = fitnesses[i];
 		}
+	}
+
+	public double getFitness() {
+		return this.fitness;
 	}
 
 	public double getFirstObj(int _num) {

@@ -74,12 +74,20 @@ public class Rule {
 		this.ruleLength = ruleLengthCalc();
 	}
 
+
 	//ルール結論部 決定メソッド
 	public void calcRuleConc(DataSetInfo trainData, ForkJoinPool forkJoinPool) {
 		//trainDataから、このミシガン型ルールにおける各クラスに対する信頼度を計算
 		double[] trust = StaticFuzzyFunc.calcTrust(trainData, this.rule, trainData.getCnum(), forkJoinPool);
 		this.conclusion = StaticFuzzyFunc.calcConclusion(trust, trainData.getCnum());
 		this.cf = StaticFuzzyFunc.calcCf(this.conclusion, trust, trainData.getCnum());
+		this.ruleLength = ruleLengthCalc();
+	}
+
+	//結論部に存在しないクラスから選択して結論部クラスを決定する
+	public void makeRuleNoCla(int[] noClass) {
+		this.conclusion = noClass[uniqueRnd.nextInt(noClass.length)];
+		this.cf = uniqueRnd.nextDouble();
 		this.ruleLength = ruleLengthCalc();
 	}
 
@@ -92,6 +100,18 @@ public class Rule {
 			}
 		}
 		return ans;
+	}
+
+	//結論部とルール重みを指定してセットする
+	public void makeRuleCross(int ansCla, double cf) {
+		this.conclusion = ansCla;
+		this.cf = cf;
+		this.ruleLength = ruleLengthCalc();
+	}
+
+	//[num]番目のファジィ集合を[ruleN]にする
+	public void setRule(int num, int ruleN) {
+		this.rule[num] = ruleN;
 	}
 
 	//HDFS使わない場合
@@ -112,6 +132,10 @@ public class Rule {
 
 	//GET SET Methods
 
+	public int getRule(int num) {
+		return this.rule[num];
+	}
+
 	public int getConc() {
 		return this.conclusion;
 	}
@@ -123,6 +147,7 @@ public class Rule {
 	public int getRuleLength() {
 		return this.ruleLength;
 	}
+
 
 	// ********************************************************
 }
