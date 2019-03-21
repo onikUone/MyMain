@@ -1,5 +1,6 @@
 package gbml;
 
+import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 
 import methods.MersenneTwisterFast;
@@ -32,6 +33,22 @@ public class Rule {
 		this.DataSize = DataSize;
 		this.TstDataSize = TstDataSize;
 	}
+
+	public Rule(Rule rule) {
+		this.uniqueRnd = new MersenneTwisterFast( rule.uniqueRnd.nextInt() );
+
+		this.Ndim = rule.Ndim;
+		this.Cnum = rule.Cnum;
+		this.DataSize = rule.DataSize;
+		this.TstDataSize = rule.TstDataSize;
+
+		this.rule = Arrays.copyOf(rule.rule, rule.Ndim);
+
+		this.conclusion = rule.conclusion;
+		this.cf = rule.cf;
+		this.ruleLength = rule.ruleLength;
+		this.fitness = rule.fitness;
+	}
 	// ********************************************************
 
 	//Methods *************************************************
@@ -46,6 +63,17 @@ public class Rule {
 		rule = StaticFuzzyFunc.selectSingle(line, Ndim, rnd2);
 	}
 
+	//前件部をランダムで生成
+	public void makeRuleRnd1(MersenneTwisterFast rnd) {
+		rule = StaticFuzzyFunc.selectRnd(this.Ndim, rnd);
+	}
+	//後件部をランダムで生成
+	public void makeRuleRnd2() {
+		this.conclusion = uniqueRnd.nextInt(Cnum);
+		this.cf = uniqueRnd.nextDouble();
+		this.ruleLength = ruleLengthCalc();
+	}
+
 	//ルール結論部 決定メソッド
 	public void calcRuleConc(DataSetInfo trainData, ForkJoinPool forkJoinPool) {
 		//trainDataから、このミシガン型ルールにおける各クラスに対する信頼度を計算
@@ -54,8 +82,6 @@ public class Rule {
 		this.cf = StaticFuzzyFunc.calcCf(this.conclusion, trust, trainData.getCnum());
 		this.ruleLength = ruleLengthCalc();
 	}
-
-
 
 	//ルール数の計算
 	public int ruleLengthCalc() {
@@ -67,5 +93,36 @@ public class Rule {
 		}
 		return ans;
 	}
+
+	//HDFS使わない場合
+	//引数[line]に対する[this]の適合度を返すメソッド
+	public double calcAdaptationPure(Pattern line) {
+		return StaticFuzzyFunc.memberMulPure(line, this.rule);
+	}
+
+	//単一勝利したときに使用回数としてfitnessをインクリメント
+	public void addFitness() {
+		this.fitness++;
+	}
+
+	public void clearFitness() {
+		this.fitness = 0;
+	}
+
+
+	//GET SET Methods
+
+	public int getConc() {
+		return this.conclusion;
+	}
+
+	public double getCf() {
+		return this.cf;
+	}
+
+	public int getRuleLength() {
+		return this.ruleLength;
+	}
+
 	// ********************************************************
 }

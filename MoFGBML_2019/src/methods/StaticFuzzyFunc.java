@@ -201,6 +201,29 @@ public class StaticFuzzyFunc {
 		return rule;
 	}
 
+	//ランダムにルール生成
+	public static int[] selectRnd(int Ndim, MersenneTwisterFast rnd) {
+		int[] rule = new int[Ndim];
+		//初期ルールのdon't care処理
+		boolean isProb = Consts.IS_PROBABILITY_DONT_CARE;
+		double dcRate;
+		if(isProb) {
+			dcRate = Consts.DONT_CARE_RT;
+		} else {
+			// ( Ndim - 定数:5 ) / Ndim
+			dcRate = (double)(((double)Ndim - (double)Consts.ANTECEDENT_LEN) / (double)Ndim);
+		}
+
+		for(int n = 0; n < Ndim; n++) {
+			if(rnd.nextDouble() < dcRate) {
+				rule[n] = 0;
+			} else {
+				rule[n] = rnd.nextInt(Consts.FUZZY_SET_NUM) + 1;
+			}
+		}
+
+		return rule;
+	}
 
 
 }

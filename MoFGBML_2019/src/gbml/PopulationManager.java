@@ -144,12 +144,33 @@ public class PopulationManager implements Serializable{
 			for(int pop_i = 0; pop_i < currentRuleSets.size(); pop_i++) {
 				//各個体（=ピッツバーグ型個体）の各ルールを生成
 				currentRuleSets.get(pop_i).generalInitialRules(dataSetInfo, forkJoinPool);
-				//TODO 2019/03/19
 			}
 		}else if(calclationType == 1) {
 			//TODO spark用
 		}
 	}
 
+	//[RuleSet]に対して所属する島番号インデックスをセットする
+	public void setDataIdxtoRuleSets(int dataIdx, boolean isParent) {
+		if(isParent) {
+			currentRuleSets.stream().forEach( r -> r.setDataIdx(dataIdx) );
+		} else {
+			newRuleSets.stream().forEach( r -> r.setDataIdx(dataIdx) );
+		}
+	}
+
+	//GET SET Methods
+
+	public void setIslandPopNum(int _popNum) {
+		this.islandPopNum = _popNum;
+	}
+
+	public void setDataIdx(int _dataIdx) {
+		this.dataIdx = _dataIdx;
+	}
+
+	public void setEmoType(int _emoType) {
+		this.emoType = _emoType;
+	}
 	// ************************************************************
 }

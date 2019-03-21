@@ -175,7 +175,8 @@ public class Main {
 
 		//Execute GA. (GA実行)
 		//GA終了後の最終個体群の情報が[populationManagers]に保存される
-		PopulationManager[] populationManagers = gaManager.gaFrame(trainDataInfos, sets.migrationItv, sets.rotationItv, sets.calclationType, repeatNum, crossValidationNum);
+		PopulationManager[] populationManagers = gaManager.gaFrame(trainDataInfos, sets.migrationItv, sets.rotationItv, sets.calclationType, repeatNum, crossValidationNum, timeWatcher);
+
 
 	}
 

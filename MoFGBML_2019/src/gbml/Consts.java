@@ -5,21 +5,30 @@ import java.lang.reflect.Field;
 //各種定数 定義クラス
 public class Consts {
 
+	//OS
+	public static final int WINDOWS = 0;	//windows
+	public static final int UNIX = 1;	//unix
+
 	//Experiment's Parameters - 実験設定パラメータ
 	public static final boolean IS_RANDOM_PATTERN_SELECT = false;	//ランダムなパターンで組む
 
 	public static final boolean IS_NOT_EQUAL_DIVIDE_NUM = false;	//部分個体群とデータ分割数を一緒にしない
 
+	//Parallel Parameters - 並列用パラメータ
+	public static final boolean IS_RULESETS_SORT = false;	//評価の際にルール数でソートするかどうか
 
-	//OS
-	public static final int WINDOWS = 0;	//windows
-	public static final int UNIX = 1;	//unix
 
 
 	//GBML's parameters
 	public static final int ANTECEDENT_LEN = 5;	//don't careにしない条件部の数
 	public static final double DONT_CARE_RT = 0.8;	//don't care適応確率
 	public static final boolean IS_PROBABILITY_DONT_CARE = false;	//don't careを確率で行う
+
+	public static final boolean DO_LOG_PER_LOG = false;	//ログでログを出力
+
+	//NSGA-II's Parameters
+	public static final int NSGA2 = 0;	//NSGA-IIの番号
+	public static final boolean DO_CD_NORMALIZE = false;	//Crowding Distance を正規化するかどうか
 
 	//MOEAD's parameters
 	public static final int SECOND_OBJECTIVE_TYPE = 0;	//2目的目, 0:rule, 1:length, 2:rule * length, 4:length/rule
@@ -28,6 +37,16 @@ public class Consts {
 	public static final int FUZZY_SET_NUM = 14;	//ファジィ集合の種類数
 	public static final int INITIATION_RULE_NUM = 30;	//初期ルール数
 	public static final boolean DO_HEURISTIC_GENERATION = true;	//ヒューリスティック生成法
+
+
+	//One Objective Weights
+	public static final int W1 = 1000;
+	public static final int W2 = -1;
+	public static final int W3 = -1;
+
+
+	//Other parametaers
+	public static final int PER_SHOW_GENERATION_NUM = 100;	//表示する世代間隔
 
 	//Folders' Name
 	public static final String ROOTFOLDER = "result";
