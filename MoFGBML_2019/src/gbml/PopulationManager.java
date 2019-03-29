@@ -166,9 +166,11 @@ public class PopulationManager implements Serializable{
 	}
 
 	//親選択・交叉操作（Pittsburgh型遺伝操作 + Michigan操作）
+	//(newRuleSetsIdx)番目の子個体を生成するメソッド
+	//Michigan適用確率に従って，Michigan型遺伝的操作 or Pittsburgh型遺伝的操作 のどちらかで子個体を生成
 	protected void crossOverAndMichiganOpe(int newRuleSetsIdx, int popSize, ForkJoinPool forkJoinPool, DataSetInfo trainDataInfo) {
-		int mom, dad;
-		int Nmom, Ndad;
+		int mom, dad;	//親個体（Pittsburgh型個体）のインデックス
+		int Nmom, Ndad;	//親個体に含まれるMichigan型ルールのインデックス
 
 		//親選択
 		mom = StaticGeneralFunc.binaryT4(currentRuleSets, uniqueRnd, popSize, objectiveNum);
@@ -190,11 +192,67 @@ public class PopulationManager implements Serializable{
 				}
 			}
 		} else {
-			//Pittsburgh型個体（＝識別器）の交叉操作
-			//TODO 2019/03/21
+			//Pittsburgh型個体（＝識別器自体）の交叉操作
+			if(uniqueRnd.nextDouble() < (double)(Consts.RULESET_CROSS_RT)) {
+				//それぞれの親個体から，ランダムなRuleのインデックスを選択する
+				Nmom = uniqueRnd.nextInt(currentRuleSets.get(mom).getRuleNum()) + 1;	//momから一つのMichigan型ルール
+				Ndad = uniqueRnd.nextInt(currentRuleSets.get(dad).getRuleNum()) + 1;	//dadから一つのMichigan型ルール
+
+				if( (Nmom + Ndad) > Consts.MAX_RULE_NUM) {
+					int delNum = Nmom + Ndad - Consts.MAX_RULE_NUM;
+					for(int v = 0; v < delNum; v++) {
+						if(uniqueRnd.nextBoolean()) {
+							Nmom--;
+						} else {
+							Ndad--;
+						}
+					}
+				}
+
+				int pmom[] = new int[Nmom];
+				int pdad[] = new int[Ndad];
+
+				//mom個体からNmom個のMichigan型ルールを非復元抽出
+				pmom = StaticGeneralFunc.sampringWithout(Nmom, currentRuleSets.get(mom).getRuleNum(), uniqueRnd);
+				//dad個体からNdad個のMichigan型ルールを非復元抽出
+				pdad = StaticGeneralFunc.sampringWithout(Ndad, currentRuleSets.get(dad).getRuleNum(), uniqueRnd);
+
+				//子個体生成開始
+				newRuleSets.get(newRuleSetsIdx).micRules.clear();
+				for(int j = 0; j < Nmom; j++) {
+					newRuleSets.get(newRuleSetsIdx).setMicRule(currentRuleSets.get(mom).getMicRule(pmom[j]));
+				}
+				for(int j = 0; j < Ndad; j++) {
+					newRuleSets.get(newRuleSetsIdx).setMicRule(currentRuleSets.get(dad).getMicRule(pdad[j]));
+				}
+
+				// </ Pittsburgh型遺伝的操作
+			} else {
+				//Michigan型もPittsburgh型も遺伝的操作を行わない
+				//親をそのまま子個体とする
+				if(uniqueRnd.nextBoolean()) {//mom or dad
+					RuleSet deep = new RuleSet(currentRuleSets.get(mom));
+					newRuleSets.get(newRuleSetsIdx).copyRuleSet(deep);
+				} else {
+					RuleSet deep = new RuleSet(currentRuleSets.get(dad));
+					newRuleSets.get(newRuleSetsIdx).copyRuleSet(deep);
+				}
+			}
+			newRuleSets.get(newRuleSetsIdx).setRuleNum();
 		}
+	}
 
+	//子個体群の各Michigan型ルールの突然変異操作
+	protected void newRuleSetMutation(int ruleSetIndex, ForkJoinPool forkJoinPool, DataSetInfo trainData) {
+		int rulesNum = newRuleSets.get(ruleSetIndex).newMicRules.size();
 
+		for(int rule_i = 0; rule_i < rulesNum; rule_i++) {
+			if(uniqueRnd.nextInt(rulesNum) == 0) {
+				int mutDim = uniqueRnd.nextInt(trainData.getNdim());	//突然変異を加える属性を選択
+				//(ruleSetIndex番目の子個体)の各ルールに突然変異操作を加える
+				newRuleSets.get(ruleSetIndex).micMutation(rule_i, mutDim, forkJoinPool, trainData);
+			}
+		}
 	}
 
 	//GET SET Methods

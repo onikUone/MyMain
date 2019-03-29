@@ -23,39 +23,87 @@ public class StaticGeneralFunc {
 		return allSettings;
 	}
 
+
+//TODO sampringWithout2()で問題なければ削除
+//	//非復元抽出
+//	//[0, DataSize-1]の範囲から，非復元でnum個のインデックスをランダムに抽出する
+//	public static int[] sampringWithout_old(int num, int DataSize, MersenneTwisterFast rnd) {
+//		int[] ans = new int[num];
+//		int i, j, same;
+//
+//		int[] patternNumber2 = new int[DataSize];
+//		int generateNumber = num;
+//
+//		//DataSizeが取り出したい数(num)に足りないときは，
+//		//DataSize全体 + 足りない分のインデックスを0から追加していく
+//		if(DataSize < num) {
+//			for(i = 0; i < DataSize; i++) {
+//				patternNumber2[i] = i;
+//			}
+//			generateNumber = num - DataSize;
+//		}
+//
+//		//非復元抽出
+//		for(i = 0; i < generateNumber; i++) {
+//			same = 0;
+//			ans[i] = rnd.nextInt(DataSize);
+//			for(j = 0; j < i; j++) {
+//				if(ans[i] == ans[j]) {
+//					same = 1;
+//				}
+//			}
+//			if(same == 1) {
+//				i--;
+//			}
+//		}
+//
+//		if(DataSize < num) {
+//			int ii = 0;
+//			for(i = generateNumber; i < num; i++) {
+//				ans[i] = patternNumber2[ii];
+//				ii++;
+//			}
+//		}
+//
+//		return ans;
+//	}
+
 	//非復元抽出
+	//[0, DataSize-1]の範囲から，非復元でnum個のインデックスをランダムに抽出する
 	public static int[] sampringWithout(int num, int DataSize, MersenneTwisterFast rnd) {
-		int[] ans = new int[num];
-		int i, j, same;
+		int ans[] = new int[num];
 
-		int[] patternNumber2 = new int[DataSize];
-		int generateNumber = num;
+		//DataSizeが取り出したい数(num)に足りないとき用
+		int[] number2 = new int[DataSize];
+		int generateNumber = num;	//問題なければ，num個のNumberをGenerateする
 
+		//DataSizeが取り出したい数(num)に足りないときは，
+		//DataSize全体(順番はランダムになる) + 足りない分のインデックスを0から追加していく
 		if(DataSize < num) {
-			for(i = 0; i < DataSize; i++) {
-				patternNumber2[i] = i;
+			for(int i = 0; i < DataSize; i++) {
+				number2[i] = i;
 			}
 			generateNumber = num - DataSize;
 		}
 
 		//非復元抽出
-		for(i = 0; i < generateNumber; i++) {
-			same = 0;
+		for(int i = 0; i < generateNumber; i++) {
+			boolean isSame = false;
 			ans[i] = rnd.nextInt(DataSize);
-			for(j = 0; j < i; j++) {
+			for(int j = 0; j < i; j++) {
 				if(ans[i] == ans[j]) {
-					same = 1;
+					isSame = true;
 				}
 			}
-			if(same == 1) {
+			if(isSame) {
 				i--;
 			}
 		}
 
 		if(DataSize < num) {
 			int ii = 0;
-			for(i = generateNumber; i < num; i++) {
-				ans[i] = patternNumber2[ii];
+			for(int i = generateNumber; i < num; i++) {
+				ans[i] = number2[ii];
 				ii++;
 			}
 		}

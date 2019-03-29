@@ -34,6 +34,7 @@ public class Rule {
 		this.TstDataSize = TstDataSize;
 	}
 
+	//Deep Copy
 	public Rule(Rule rule) {
 		this.uniqueRnd = new MersenneTwisterFast( rule.uniqueRnd.nextInt() );
 
@@ -74,7 +75,6 @@ public class Rule {
 		this.ruleLength = ruleLengthCalc();
 	}
 
-
 	//ルール結論部 決定メソッド
 	public void calcRuleConc(DataSetInfo trainData, ForkJoinPool forkJoinPool) {
 		//trainDataから、このミシガン型ルールにおける各クラスに対する信頼度を計算
@@ -107,6 +107,32 @@ public class Rule {
 		this.conclusion = ansCla;
 		this.cf = cf;
 		this.ruleLength = ruleLengthCalc();
+	}
+
+	//突然変異メソッド
+	//dim番目の条件部に突然変異操作を行う
+	public void mutation(int dim, MersenneTwisterFast rnd2, ForkJoinPool forkJoinPool, DataSetInfo trainData) {
+		int newFuzzySet = 0;
+		int count = 0;
+		do {
+			if(count > 10) {
+				//10回突然変異の結果が（突然変異なし = 変わらない）場合，終了
+				break;
+			}
+			//ランダムに抽出したパターンのdim番目の値を取り出す
+			double rndPat = trainData.getPattern( rnd2.nextInt( trainData.getDataSize() ) ).getDimValue(dim);
+			if(rndPat >= 0.0) {
+				newFuzzySet = rnd2.nextInt(Consts.FUZZY_SET_NUM + 1);
+			} else {
+				newFuzzySet = (int)rndPat;	// = don't careになる
+			}
+			count++;
+		} while(newFuzzySet == rule[dim]);
+
+		rule[dim] = newFuzzySet;
+
+		//条件部が変わったことによる結論部の再計算
+		calcRuleConc(trainData, forkJoinPool);
 	}
 
 	//[num]番目のファジィ集合を[ruleN]にする

@@ -127,6 +127,7 @@ public class GaManager {
 			if(doLog) {
 				timeWatcher.intoSuspend();
 //TODO genCheck()の中身を完成させる
+//TODO genCheck()はこのタイミングでの途中結果（識別器情報や部分学習用データ情報など）の出力
 				genCheck(gen_i, repeat_i, cv_i, trainDataInfos, popManagers);
 				timeWatcher.exitSuspend();
 			}
@@ -134,7 +135,7 @@ public class GaManager {
 			//GA操作
 			if(populationSize == 1) {
 				//ミシガン型FGBML
-//				michiganTypeGA(trainDataInfos[0], popManagers[0], gen_i);
+//TODO			michiganTypeGA(trainDataInfos[0], popManagers[0], gen_i);
 			} else {
 				if(calclationType == 1) {
 					//TODO sparkあり
@@ -256,22 +257,59 @@ public class GaManager {
 	}
 
 	//NSGA-II 実行メソッド
+	//戻り値は，生成した子個体群の評価にかかった時間
 	protected double nsga2Type2(DataSetInfo[] trainDataInfos, PopulationManager[] popManagers, int[] dataIdx, int gen_i) {
 		//子個体生成
 		for(int island_i = 0; island_i < islandNum; island_i++) {
 			geneticOperation(trainDataInfos[dataIdx[island_i]], popManagers[island_i], forkJoinPool);
 		}
+
+		//不要なルールの削除
+		for(int island_i = 0; island_i < islandNum; island_i++) {
+			deleteUnnecessaryRules(popManagers[island_i]);
+		}
+
+		//子個体群に対してデータ番号付与
+		for(int i = 0; i < popManagers.length; i++) {
+			popManagers[i].setDataIdxtoRuleSets(dataIdx[i], false);
+		}
+
+		//子個体群の個体評価開始
+		TimeWatcher timer = new TimeWatcher();
+		timer.start();
+
+		//統合してから評価する(シャローコピー)
+		PopulationManager allPopManager = new PopulationManager(popManagers);
+		evaluationIndividual(trainDataInfos, allPopManager.newRuleSets);
+
+		timer.end();
+
+		//世代更新
+		for()
+		//TODO 2019/03/29
+
+
+
+
 	}
 
-	//
+	//与えられたpopManagerの個体群に対して，Michigan + Pittsburgh のハイブリッド遺伝的操作を行う
 	protected void geneticOperation(DataSetInfo trainDataInfo, PopulationManager popManager, ForkJoinPool forkJoinPool) {
 		int length = popManager.getIslandPopNum();
 		popManager.newRuleSets.clear();
 
 		for(int child_i = 0; child_i < length; child_i++) {
 			popManager.newRuleSetInit();
+			//Hybrid Genetic Operation
 			popManager.crossOverAndMichiganOpe(child_i, popManager.currentRuleSets.size(), forkJoinPool, trainDataInfo);
-			//TODO 2019/03/21 呼び出し元
+			popManager.newRuleSetMutation(child_i, forkJoinPool, trainDataInfo);
+		}
+	}
+
+	//子個体群(newRuleSets)に対して不要なルールを削除する
+	protected void deleteUnnecessaryRules(PopulationManager popManager) {
+		for(int rule_i = 0; rule_i < popManager.newRuleSets.size(); rule_i++) {
+			popManager.newRuleSets.get(rule_i).removeRule();
 		}
 	}
 

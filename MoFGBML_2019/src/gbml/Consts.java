@@ -29,6 +29,8 @@ public class Consts {
 	public static final double RULE_CHANGE_RT = 0.2;	//ルール入れ替え割合
 	public static final boolean DO_LOG_PER_LOG = false;	//ログでログを出力
 
+	public static final double RULESET_CROSS_RT = 0.9;	//Pittsburgh交叉確率
+
 	//NSGA-II's Parameters
 	public static final int NSGA2 = 0;	//NSGA-IIの番号
 	public static final boolean DO_CD_NORMALIZE = false;	//Crowding Distance を正規化するかどうか
@@ -39,6 +41,7 @@ public class Consts {
 	//Fuzzy System's parameters
 	public static final int FUZZY_SET_NUM = 14;	//ファジィ集合の種類数
 	public static final int INITIATION_RULE_NUM = 30;	//初期ルール数
+	public static final int MAX_RULE_NUM = 60;	//1識別器あたりの最大ルール数
 	public static final boolean DO_HEURISTIC_GENERATION = true;	//ヒューリスティック生成法
 
 

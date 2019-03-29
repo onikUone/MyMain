@@ -76,6 +76,7 @@ public class RuleSet {
 	}
 
 	//ミシガン型のbestOfAllGen用
+	//Deep Copy
 	public RuleSet(RuleSet ruleSet) {
 		this.uniqueRnd =  new MersenneTwisterFast( ruleSet.uniqueRnd.nextInt() );
 		this.Ndim = ruleSet.Ndim;
@@ -332,6 +333,7 @@ public class RuleSet {
 		}
 	}
 
+	//Deep Copy
 	public void copyRuleSet(RuleSet ruleSet) {
 		this.uniqueRnd = new MersenneTwisterFast( ruleSet.uniqueRnd.nextInt() );
 		this.Ndim = ruleSet.Ndim;
@@ -492,6 +494,11 @@ public class RuleSet {
 		newMicRules.get(num).makeRuleCross(micRules.get(mom).getConc(), newCf);
 	}
 
+	//与えられた(ruleIdx)番目のルールの(dim)番目の条件部に突然変異操作を行う
+	public void micMutation(int ruleIdx, int dim, ForkJoinPool forkJoinPool, DataSetInfo trainData) {
+		micRules.get(ruleIdx).mutation(dim, uniqueRnd, forkJoinPool, trainData);
+	}
+
 	//
 	public void randomGeneration(int num) {
 		//足りていないクラスの個体生成を優先
@@ -581,11 +588,21 @@ public class RuleSet {
 		this.fitnesses[_o] = _fitness;
 	}
 
+	//Deep Copy
+	public void setMicRule(Rule micRule) {
+		Rule mic = new Rule(micRule);
+		this.micRules.add(mic);
+	}
 
 
 	//NSGA-II
 	public void setRank(int _rank) {
 		this.rank = _rank;
+	}
+
+
+	public Rule getMicRule(int idx) {
+		return this.micRules.get(idx);
 	}
 
 	public int getRank() {
