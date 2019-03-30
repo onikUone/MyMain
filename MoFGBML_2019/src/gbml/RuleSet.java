@@ -84,12 +84,6 @@ public class RuleSet {
 		this.DataSize = ruleSet.DataSize;
 		this.DataSizeTst = ruleSet.DataSizeTst;
 
-		for(int i = 0; i < this.Cnum; i++) {
-			for(int j = 0; j < this.Cnum; j++) {
-				this.confusionMatrix[i][j] = ruleSet.confusionMatrix[i][j];
-			}
-		}
-
 		this.missRate = ruleSet.missRate;
 		this.ruleNum = ruleSet.ruleNum;
 		this.ruleLength = ruleSet.ruleLength;
@@ -564,6 +558,18 @@ public class RuleSet {
 
 	public double[] getFitnesses() {
 		return this.fitnesses;
+	}
+
+	public int getCnum() {
+		return this.Cnum;
+	}
+
+	public int getNdim() {
+		return this.Ndim;
+	}
+
+	public int[][] getMatrix(){
+		return this.confusionMatrix;
 	}
 
 	public void setRuleNum() {

@@ -158,8 +158,8 @@ public class Rule {
 
 	//GET SET Methods
 
-	public int getRule(int num) {
-		return this.rule[num];
+	public int getRule(int dim) {
+		return this.rule[dim];
 	}
 
 	public int getConc() {
@@ -174,6 +174,9 @@ public class Rule {
 		return this.ruleLength;
 	}
 
+	public int getFitness() {
+		return this.fitness;
+	}
 
 	// ********************************************************
 }

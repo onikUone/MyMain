@@ -63,8 +63,8 @@ public class Main {
 	//自動でrepeatする
 	static public void repeatExection(Settings sets, String[] args) {
 		//読み込みファイル名保持配列
-		String[][] traFiles = new String[sets.finishRepeatPos - sets.startRepeatPos][sets.crossValidationNum];
-		String[][] tstFiles = new String[sets.finishRepeatPos - sets.startRepeatPos][sets.crossValidationNum];
+		String[][] traFiles = new String[sets.finishRepeatPos - sets.startRepeatPos + 1][sets.crossValidationNum];
+		String[][] tstFiles = new String[sets.finishRepeatPos - sets.startRepeatPos + 1][sets.crossValidationNum];
 		Output.makeFileName(sets.dataName, traFiles, tstFiles);
 
 		//データディレクトリを物理的に作成
@@ -90,6 +90,8 @@ public class Main {
 		for(int rep_i = sets.startRepeatPos; rep_i < sets.finishRepeatPos; rep_i++) {
 			for(int cv_i = 0; cv_i < sets.crossValidationNum; cv_i++) {
 				System.out.print(rep_i + " " + cv_i);
+
+				Output.makeResultDir(resultDir, rep_i, cv_i);
 
 				startExperiment(sets, traFiles[rep_i][cv_i], tstFiles[rep_i][cv_i], rnd, resultMaster,
 						cv_i, rep_i, traFiles[rep_i][cv_i], tstFiles[rep_i][cv_i]);
@@ -173,9 +175,23 @@ public class Main {
 		GaManager gaManager = new GaManager(sets.populationSize, nsga2, moeads, rnd, sets.forkJoinPool, sets.serverList, sets.serverNum,
 											sets.objectiveNum, sets.generationNum, sets.emoType, sets.islandNum, resultMaster, evaWatcher, sets.dataName);
 
-		//Execute GA. (GA実行)
+		//Execute Genetic Algorithm (GA実行)
 		//GA終了後の最終個体群の情報が[populationManagers]に保存される
 		PopulationManager[] populationManagers = gaManager.gaFrame(trainDataInfos, sets.migrationItv, sets.rotationItv, sets.calclationType, repeatNum, crossValidationNum, timeWatcher);
+
+		//1試行 時間計測終了
+		timeWatcher.end();
+		resultMaster.setTimes( timeWatcher.getNano() );
+
+		/***********************これ以降出力操作************************/
+		//評価用DataFrame作成
+//		DataSetInfo testDataInfo = null;
+//		testDataInfo = new DataSetInfo();
+//		if(sets.calclationType == 1) {
+//			nowTestFile = sets.dirLocation + nowTestFile;
+//		}
+//		DataLoader.inputFile(testDataInfo, nowTestFile);
+
 
 
 	}

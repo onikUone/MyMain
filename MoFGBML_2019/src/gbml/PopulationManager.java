@@ -255,10 +255,55 @@ public class PopulationManager implements Serializable{
 		}
 	}
 
+	//個体群中の最良個体の獲得メソッド
+	public RuleSet calcBestRuleSet() {
+		RuleSet best;
+		best = new RuleSet(currentRuleSets.get(0));	//まず一つ目の識別器で初期化
+
+		if(objectiveNum == 1) {
+			//TODO 単目的の場合
+		} else {	//多目的
+			/* 最良個体基準
+			*  1. rankの小さいもの
+			*  2. 誤識別率が小さいもの
+			*  3. ルール数が少ないもの
+			*  4. 総ルール長が少ないもの
+			*  5. それでも同じ場合,後から読み込んだもので置き換える
+			*/
+			for(int pop_i = 0; pop_i < currentRuleSets.size(); pop_i++) {
+				if(currentRuleSets.get(pop_i).getRank() == 0) {	//最良個体は必ずrank = 0であるため，rank=0以外は見ない
+					if(currentRuleSets.get(pop_i).getMissRate() < best.getMissRate()) {
+
+						best = new RuleSet(currentRuleSets.get(pop_i));
+
+					} else if(currentRuleSets.get(pop_i).getMissRate() == best.getMissRate()) {
+						if(currentRuleSets.get(pop_i).getRuleNum() < best.getRuleNum()) {
+
+							best = new RuleSet(currentRuleSets.get(pop_i));
+
+						} else if(currentRuleSets.get(pop_i).getRuleNum() == best.getRuleNum()) {
+							if(currentRuleSets.get(pop_i).getRuleLength() <= best.getRuleLength()) {
+
+								best = new RuleSet(currentRuleSets.get(pop_i));
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return best;
+	}
+
 	//GET SET Methods
 
 	public int getIslandPopNum() {
 		return this.islandPopNum;
+	}
+
+	public int getEmoType() {
+		return this.emoType;
 	}
 
 	public void setIslandPopNum(int _popNum) {

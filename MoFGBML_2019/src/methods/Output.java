@@ -18,7 +18,7 @@ public class Output {
 	//与えられたdataNameから、使用するファイル名を保持する配列を作成
 	public static void makeFileName(String dataName, String[][] traFiles, String[][] tstFiles) {
 		for(int rep_i = 0; rep_i < traFiles.length; rep_i++) {
-			for(int cv_i = 0; cv_i < traFiles.length; cv_i++) {
+			for(int cv_i = 0; cv_i < traFiles[rep_i].length; cv_i++) {
 				traFiles[rep_i][cv_i] = makeFileNameOne(dataName, cv_i, rep_i, true);
 				tstFiles[rep_i][cv_i] = makeFileNameOne(dataName, cv_i, rep_i, false);
 			}
@@ -63,6 +63,27 @@ public class Output {
 		path = dir + sep + Consts.OTHERS;
 		newdir = new File(path);
 		newdir.mkdirs();
+
+		path = dir + sep + Consts.LOGS;
+		newdir = new File(path);
+		newdir.mkdirs();
+
+		path = dir + sep + Consts.LOGS_READABLE;
+		newdir = new File(path);
+		newdir.mkdirs();
+	}
+
+	//試行回数ラベルを付与したディレクトリ作成
+	public static void makeResultDir(String resultDir, int rep_i, int cv_i) {
+		String sep = File.separator;
+		String path = resultDir + sep + Consts.LOGS_READABLE + sep + "result_" + String.valueOf(rep_i) + String.valueOf(cv_i);
+		Output.makeDirPath(path);
+	}
+
+	//与えられたpathのディレクトリを物理的に作成
+	public static void makeDirPath(String path) {
+		File newdir = new File(path);
+		newdir.mkdirs();
 	}
 
 	//実験パラメータ出力
@@ -78,6 +99,35 @@ public class Output {
 			FileWriter fw = new FileWriter(fileName, true);
 			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
 			pw.println(st);
+			pw.close();
+		} catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+
+	//文字列配列用
+	public static void writeln(String fileName, String[] array) {
+		try {
+			FileWriter fw = new FileWriter(fileName, true);
+			PrintWriter pw = new PrintWriter( new BufferedWriter(fw) );
+			for(int i = 0; i < array.length; i++) {
+				pw.println(array[i]);
+			}
+			pw.close();
+		} catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+
+	//fileNameのファイルにDouble[] arrayを書き込む
+	//数値配列用
+	public static void writeln(String fileName, Double[] array) {
+		try {
+			FileWriter fw = new FileWriter(fileName, true);
+			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
+			for(int i = 0; i < array.length; i++) {
+				pw.println(array[i]);
+			}
 			pw.close();
 		} catch(IOException ex) {
 			ex.printStackTrace();

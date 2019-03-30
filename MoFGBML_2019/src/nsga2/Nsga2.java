@@ -1,9 +1,12 @@
 package nsga2;
 
+import static java.util.Comparator.*;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 import gbml.Consts;
+import gbml.PopulationManager;
 import gbml.RuleSet;
 import methods.MersenneTwisterFast;
 
@@ -192,6 +195,32 @@ public class Nsga2 implements Serializable{
 		}
 	}
 
+
+	//NSGA-IIに基づく世代更新(popManagerのcurrentRuleSetsを更新する)
+	public void populationUpdate(PopulationManager popManager) {
+
+		int popSize = popManager.currentRuleSets.size();	//個体群サイズ
+
+		//現世代個体群 + 子個体群 を margeRuleSetsに統合
+		popManager.margeRuleSets.clear();
+		popManager.margeRuleSets.addAll(popManager.currentRuleSets);
+		popManager.margeRuleSets.addAll(popManager.newRuleSets);
+		popManager.currentRuleSets.clear();
+		popManager.newRuleSets.clear();
+
+		//ランクとCrowding Distance計算
+		calcRank(popManager.margeRuleSets);
+		//ランクとCrowding Distanceでソート
+		//1. ランクでソート（昇順）
+		//2. 同じランクなら、Crowding Distanceでソート（降順）
+		popManager.margeRuleSets.sort(comparing(RuleSet::getRank).reversed()	//昇順降順が混じるため、打ち消しのリバース
+										.thenComparing(RuleSet::getCrowding).reversed());
+
+		//評価値ソート順にpopSizeだけ次世代に個体を格納
+		for(int pop_i = 0; pop_i < popSize; pop_i++) {
+			popManager.currentRuleSets.add(popManager.margeRuleSets.get(pop_i));
+		}
+	}
 
 	// **********************************************
 

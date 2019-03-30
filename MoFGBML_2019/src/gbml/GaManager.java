@@ -115,7 +115,7 @@ public class GaManager {
 		}
 
 		// **********************************************
-		//Step 2. 進化計算開始
+		//Step 2. 進化計算開始 = 世代開始
 		boolean doLog = Consts.DO_LOG_PER_LOG;
 		int nowGen = 0;
 		for(int gen_i = 0; gen_i < generationNum; gen_i++) {
@@ -126,8 +126,6 @@ public class GaManager {
 			//途中結果保持（テストデータは無理）
 			if(doLog) {
 				timeWatcher.intoSuspend();
-//TODO genCheck()の中身を完成させる
-//TODO genCheck()はこのタイミングでの途中結果（識別器情報や部分学習用データ情報など）の出力
 				genCheck(gen_i, repeat_i, cv_i, trainDataInfos, popManagers);
 				timeWatcher.exitSuspend();
 			}
@@ -142,13 +140,68 @@ public class GaManager {
 				} else {
 					if(emoType == 0 || objectiveNum == 1) {
 						times.add(nsga2Type2(trainDataInfos, popManagers, dataIdx, gen_i));	//NSGA-IIの実施
-						s
+					} else {
+						//TODO MOEA/D用
 					}
 				}
 			}
 
+			boolean flgMigRot = false;	//移住操作 or 交換操作 を行ったかどうか
+
+			//最良個体 移住操作
+			if(islandNum != 1 && gen_i % migrationItv == 0 && nowGen == 0 && gen_i != 0) {
+				//移住操作
+				System.out.print("^");	//移住操作を行った表示
+				migration(popManagers);
+				flgMigRot = true;
+			}
+
+			//部分学習用データ交換操作 = 部分個体群移住操作
+			if(islandNum != 1 && gen_i % rotationItv == 0 && nowGen == 0 && gen_i != 0) {
+				//交換操作
+				System.out.print("~");	//交換操作を行った表示
+				rotationData(dataIdx);
+				flgMigRot = true;
+			}
+
+			if(flgMigRot) {
+				//環境変化後の島での再評価
+				for(int island_i = 0; island_i < popManagers.length; island_i++) {
+					popManagers[island_i].setDataIdxtoRuleSets(dataIdx[island_i], true);
+					popManagers[island_i].setDataIdx(dataIdx[island_i]);
+				}
+				if(calclationType == 0) {
+					//サーバ1つの場合
+					PopulationManager allPopManager = new PopulationManager(popManagers);	//統合して評価する（シャローコピー）
+					evaluationIndividual(trainDataInfos, allPopManager.currentRuleSets);
+				} else if(calclationType == 1) {
+					//TODO Sparkあり
+					//複数サーバの場合は現個体群の評価をfalseに設定する
+				}
+			}
+
+			//評価だけ並列の場合の世代更新操作
+			if(islandNum == 1 && calclationType == 1) {
+				if(emoType == 0) {
+					nsga2.populationUpdate(popManagers[0]);
+				} else {
+					//TODO MOEA/D用世代更新
+					//TODO
+					//TODO
+				}
+			}
+
+			//分散サーバ島モデルの場合の終了処理
+			if(nowGen >= generationNum) {
+				break;
+			}
 		}
 
+		//各世代で計測した時間の出力
+		String fileName = dataName + "_allTimes_" + String.valueOf(repeat_i) + String.valueOf(cv_i) + ".csv";
+		resultMaster.writeGeneTime(fileName, times);
+
+		// **********************************************
 
 		return popManagers;
 	}
@@ -213,7 +266,10 @@ public class GaManager {
 		return islandPopNums;
 	}
 
-	//与えられた個体群(ArrayList<RuleSet>)の評価値を求める
+	//島ごとに別々の評価値
+	//与えられた個体群(ArrayList<RuleSet>)の(trainDataInfos)に対する評価値を求める
+	//各識別器（RuleSet）は自身に割り当てられた(dataIdx)によって自分の島の部分学習用データに対する評価値を計算する
+	//evaluationIndividual()を行うタイミングでConfusion Matrixが更新される
 	public void evaluationIndividual(DataSetInfo[] trainDataInfos, ArrayList<RuleSet> ruleSets) {
 		//ルール数でソート
 		boolean isSort = Consts.IS_RULESETS_SORT;
@@ -242,17 +298,24 @@ public class GaManager {
 
 	//途中結果保持メソッド
 	public void genCheck(int gen, int repeat, int cv, DataSetInfo[] trainDataInfos, PopulationManager[] popManagers) {
-		if( (gen+1) <= 10 ||
-			(gen+1) %10 == 0 && gen<=100||
-			(gen+1) %100 == 0 && gen<=1000||
-			(gen+1) %1000 == 0 && gen<=10000||
-			(gen+1) %10000 == 0 && gen<=100000||
-			(gen+1) %100000 == 0 && gen<=1000000||
-			(gen+1) %1000000 == 0
+		if( gen == 0 ||
+			(gen + 1) <= 10 ||
+			(gen+1) == 10 || (gen+1) == 20 || (gen+1) == 50 ||
+			(gen+1) == 100 || (gen+1) == 200 || (gen+1) == 500 ||
+			(gen+1) == 1000 || (gen+1) == 2000 || (gen+1) ==5000 ||
+			(gen+1) == 10000 || (gen+1) == 20000 || (gen+1) == 50000
 			)
 		{
 //TODO 途中結果を保持するメソッド
-//TODO 上の保持するタイミングも後で変更
+			//各個体群の出力
+			for(int island_i = 0; island_i < popManagers.length; island_i++) {
+				resultMaster.outputRulesForReadable(popManagers[island_i], gen, cv, repeat, island_i);
+			}
+
+			//TODO 2019/03/30
+			//TODO 後のプログラムで読み込みしやすい形式での部分学習用データと部分個体群情報の出力
+
+
 		}
 	}
 
@@ -277,20 +340,22 @@ public class GaManager {
 		//子個体群の個体評価開始
 		TimeWatcher timer = new TimeWatcher();
 		timer.start();
-
 		//統合してから評価する(シャローコピー)
 		PopulationManager allPopManager = new PopulationManager(popManagers);
 		evaluationIndividual(trainDataInfos, allPopManager.newRuleSets);
-
 		timer.end();
 
 		//世代更新
-		for()
-		//TODO 2019/03/29
+		for(int island_i = 0; island_i < islandNum; island_i++) {
+			if(objectiveNum == 1) {
+//				//TODO 単目的最適化の場合
+//				populationUpdateOfSingleObj();
+			} else {
+				nsga2.populationUpdate(popManagers[island_i]);
+			}
+		}
 
-
-
-
+		return timer.getNano();
 	}
 
 	//与えられたpopManagerの個体群に対して，Michigan + Pittsburgh のハイブリッド遺伝的操作を行う
@@ -310,6 +375,71 @@ public class GaManager {
 	protected void deleteUnnecessaryRules(PopulationManager popManager) {
 		for(int rule_i = 0; rule_i < popManager.newRuleSets.size(); rule_i++) {
 			popManager.newRuleSets.get(rule_i).removeRule();
+		}
+	}
+
+	//最良個体移住操作
+	protected void migration(PopulationManager[] popManagers) {
+		if(popManagers[0].getEmoType() == 0) {	//NSGA-IIの評価基準での最良個体
+			//各島の最良個体を獲得
+			RuleSet[] bests = new RuleSet[popManagers.length];
+			for(int island_i = 0; island_i < popManagers.length; island_i++) {
+				bests[island_i] = popManagers[island_i].calcBestRuleSet();
+			}
+			boolean isAll = Consts.IS_ALL_MIGLATION;
+			//各島のベストを全ての島で共有する
+			if(isAll && popManagers[0].currentRuleSets.size() > islandNum) {
+				for(int island_i = 0; island_i < popManagers.length; island_i++) {
+					int popSize = popManagers[island_i].currentRuleSets.size() - 1;
+					int num = 0;
+					//現世代のソート下位から順に置き換えていく
+					for(int i = 0; i < bests.length; i++) {
+						if(i != island_i) {
+							popManagers[island_i].currentRuleSets.get(popSize - num).copyRuleSet(bests[i]);
+							num++;
+						}
+					}
+				}
+			} else {
+				//isAll == false : 各島の最良個体を隣の島だけに移住させる
+				//移住方向
+				// ← (island_i == 0) ← (island_i == 1) ← (island_i == 2) ←
+				int nextBestIdx = 1;
+				for(int island_i = 0; island_i < popManagers.length; island_i++) {
+					int popSize = popManagers[island_i].currentRuleSets.size() - 1;
+					//次の番号の島に移動
+					//現世代のソート最下位を置き換える
+					popManagers[island_i].currentRuleSets.get(popSize).copyRuleSet(bests[nextBestIdx]);
+					nextBestIdx++;
+					if(nextBestIdx > popManagers.length - 1) {
+						nextBestIdx = 0;
+					}
+				}
+			}
+		} else {
+			//TODO MOEA/Dの評価基準での最良個体
+			//TODO
+			//TODO
+		}
+	}
+
+	//部分学習用データ交換操作メソッド
+	//部分学習用データを管理するdataIdxのラベルを回転させることで実現
+	protected void rotationData(int[] dataIdx) {
+		boolean isNotDivNum = Consts.IS_NOT_EQUAL_DIVIDE_NUM;
+		if(isNotDivNum) {	//島数とデータ分割数が違う場合の処理
+			for(int i = 0; i < dataIdx.length; i++) {
+				dataIdx[i]++;
+				if(dataIdx[i] > islandNum-1) {
+					dataIdx[i] = 0;
+				}
+			}
+		} else {	//島数とデータ分割数が同じ場合の処理
+			int temp = dataIdx[dataIdx.length - 1];
+			for(int i = dataIdx.length-1; i >= 1; i--) {
+				dataIdx[i] = dataIdx[i - 1];
+			}
+			dataIdx[0] = temp;
 		}
 	}
 

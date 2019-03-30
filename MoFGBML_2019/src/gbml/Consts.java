@@ -14,6 +14,8 @@ public class Consts {
 
 	public static final boolean IS_NOT_EQUAL_DIVIDE_NUM = false;	//部分個体群とデータ分割数を一緒にしない
 
+	public static final boolean IS_ALL_MIGLATION = false;	//true: 各島の最良個体を全島で共有する, false: 各島の最良個体を隣の島に移住
+
 	//Parallel Parameters - 並列用パラメータ
 	public static final boolean IS_RULESETS_SORT = false;	//評価の際にルール数でソートするかどうか
 
@@ -27,7 +29,7 @@ public class Consts {
 	public static final double RULE_OPE_RT = 0.5;	//Michigan適用確率
 	public static final double RULE_CROSS_RT = 0.9;	//Michigan交叉確率
 	public static final double RULE_CHANGE_RT = 0.2;	//ルール入れ替え割合
-	public static final boolean DO_LOG_PER_LOG = false;	//ログでログを出力
+	public static final boolean DO_LOG_PER_LOG = true;	//ログでログを出力
 
 	public static final double RULESET_CROSS_RT = 0.9;	//Pittsburgh交叉確率
 
@@ -59,6 +61,8 @@ public class Consts {
 	public static final String RULESET = "ruleset";
 	public static final String VECSET = "vecset";
 	public static final String SOLUTION = "solution";
+	public static final String LOGS = "logs";
+	public static final String LOGS_READABLE = "logs_readable";
 	public static final String OTHERS = "write";
 
 	public String getStaticValues() {
