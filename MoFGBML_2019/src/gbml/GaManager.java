@@ -103,6 +103,11 @@ public class GaManager {
 			dataIdx[i] = i * dataInterval;
 		}
 
+		//部分学習用データを出力
+		timeWatcher.intoSuspend();
+		resultMaster.outputPartialData(repeat_i, cv_i, trainDataInfos);
+		timeWatcher.exitSuspend();
+
 		// **********************************************
 		//Step 1. 初期個体群生成と初期個体群の評価
 		if(calclationType == 0) {
@@ -126,7 +131,7 @@ public class GaManager {
 			//途中結果保持（テストデータは無理）
 			if(doLog) {
 				timeWatcher.intoSuspend();
-				genCheck(gen_i, repeat_i, cv_i, trainDataInfos, popManagers);
+				genCheck(gen_i, repeat_i, cv_i, popManagers);
 				timeWatcher.exitSuspend();
 			}
 
@@ -198,8 +203,10 @@ public class GaManager {
 		}
 
 		//各世代で計測した時間の出力
+		timeWatcher.intoSuspend();
 		String fileName = dataName + "_allTimes_" + String.valueOf(repeat_i) + String.valueOf(cv_i) + ".csv";
-		resultMaster.writeGeneTime(fileName, times);
+		resultMaster.writeGeneTime(repeat_i, cv_i, times);
+		timeWatcher.exitSuspend();
 
 		// **********************************************
 
@@ -297,7 +304,7 @@ public class GaManager {
 
 
 	//途中結果保持メソッド
-	public void genCheck(int gen, int repeat, int cv, DataSetInfo[] trainDataInfos, PopulationManager[] popManagers) {
+	public void genCheck(int gen, int repeat, int cv, PopulationManager[] popManagers) {
 		if( gen == 0 ||
 			(gen + 1) <= 10 ||
 			(gen+1) == 10 || (gen+1) == 20 || (gen+1) == 50 ||
@@ -306,16 +313,12 @@ public class GaManager {
 			(gen+1) == 10000 || (gen+1) == 20000 || (gen+1) == 50000
 			)
 		{
-//TODO 途中結果を保持するメソッド
+			//TODO calclation == 0 の場合のみか確認する
 			//各個体群の出力
 			for(int island_i = 0; island_i < popManagers.length; island_i++) {
 				resultMaster.outputRulesForReadable(popManagers[island_i], gen, cv, repeat, island_i);
+				resultMaster.outputRules(popManagers[island_i], gen, cv, repeat, island_i);
 			}
-
-			//TODO 2019/03/30
-			//TODO 後のプログラムで読み込みしやすい形式での部分学習用データと部分個体群情報の出力
-
-
 		}
 	}
 

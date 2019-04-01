@@ -99,6 +99,16 @@ public class Main {
 				System.out.println();
 			}
 		}
+
+		/************************************************************/
+		//出力
+		//TODO
+
+		Date end = new Date();
+		resultMaster.writeAllTime();
+		resultMaster.writeAveTime();
+		System.out.println("END: " + end);
+
 	}
 
 	//GBMLメソッド
@@ -181,7 +191,7 @@ public class Main {
 
 		//1試行 時間計測終了
 		timeWatcher.end();
-		resultMaster.setTimes( timeWatcher.getNano() );
+		resultMaster.setTimes( timeWatcher.getTrueNano() );
 
 		/***********************これ以降出力操作************************/
 		//評価用DataFrame作成
@@ -191,7 +201,6 @@ public class Main {
 //			nowTestFile = sets.dirLocation + nowTestFile;
 //		}
 //		DataLoader.inputFile(testDataInfo, nowTestFile);
-
 
 
 	}

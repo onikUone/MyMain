@@ -55,6 +55,10 @@ public class TimeWatcher {
 		return this.time;
 	}
 
+	public double getTrueNano() {
+		return this.time - this.suspend;
+	}
+
 	public double getSecSuspend() {
 		return (this.suspend/ 1000000000.0);
 	}

@@ -1,0 +1,1551 @@
+------------ pop_00 ------------
+ MissRate   : 25.971622455274524
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1086 59
+ 362 114
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4 13  2  4  5, Class: 0, CF: 0.8660209118824258, Fitness: 0
+ Rule_01:  4  2  4  4  4, Class: 0, CF: 0.4600707828158108, Fitness: 104
+ Rule_02: 12  8  2  4  6, Class: 0, CF: 0.3377449104279562, Fitness: 0
+ Rule_03: 12  4  8  8 11, Class: 1, CF: 0.06223723063546638, Fitness: 2
+ Rule_04:  2  7  4  1  4, Class: 0, CF: 0.5157504309168208, Fitness: 98
+ Rule_05:  7  7  1  8  8, Class: 1, CF: 0.34121422778175803, Fitness: 75
+ Rule_06:  4 12 12  4  2, Class: 0, CF: 0.3315143884727666, Fitness: 8
+ Rule_07:  8  8 11  7  4, Class: 0, CF: 0.9476444561809049, Fitness: 87
+ Rule_08:  2  2  4 11  3, Class: 0, CF: 0.8060500083999358, Fitness: 3
+ Rule_09:  4  4  1  4  4, Class: 0, CF: 0.5287878518071345, Fitness: 275
+ Rule_10: 11  3  2 11  2, Class: 0, CF: 0.22878448390417483, Fitness: 1
+ Rule_11:  7  8  7  7  3, Class: 0, CF: 0.9138395484652847, Fitness: 119
+ Rule_12:  3  1  8  4  7, Class: 0, CF: 0.21029264693007044, Fitness: 3
+ Rule_13:  8  4  8 12  7, Class: 0, CF: 0.4094097841020836, Fitness: 8
+ Rule_14:  7  8  8 11  1, Class: 0, CF: 0.6810560327430327, Fitness: 164
+ Rule_15: 12  4 12  2  7, Class: 0, CF: 0.38673185453240055, Fitness: 82
+ Rule_16:  4  8  3  2  1, Class: 0, CF: 0.8664600408887795, Fitness: 15
+ Rule_17: 11 12  4 13  1, Class: 1, CF: 0.2628608973006862, Fitness: 95
+ Rule_18:  2  1  8  4  3, Class: 0, CF: 0.2400734097020445, Fitness: 15
+ Rule_19: 12  1  2  7  7, Class: 0, CF: 0.5398093200266498, Fitness: 90
+ Rule_20: 12  4  3  3  8, Class: 0, CF: 0.9487522087658353, Fitness: 2
+ Rule_21:  8  7  8  2  2, Class: 0, CF: 0.026934412367123794, Fitness: 0
+ Rule_22:  2  6  4  3  7, Class: 0, CF: 0.775290493257935, Fitness: 16
+ Rule_23: 12 12  4 12  7, Class: 0, CF: 0.5410777247774528, Fitness: 146
+ Rule_24:  1  2  8  4  4, Class: 0, CF: 0.17300907666700294, Fitness: 0
+ Rule_25: 11  3  8 12 11, Class: 1, CF: 0.18144307295914297, Fitness: 1
+ Rule_26:  4 12  3  7  1, Class: 0, CF: 0.9348912454625923, Fitness: 61
+ Rule_27:  1  3  3 12  6, Class: 0, CF: 0.3295664956334339, Fitness: 0
+ Rule_28:  8  2  8 12  1, Class: 0, CF: 0.29828847831143446, Fitness: 0
+ Rule_29: 13  1  1  7  4, Class: 0, CF: 0.9868279884093276, Fitness: 151
+
+------------------------------------------------------------------
+
+------------ pop_01 ------------
+ MissRate   : 25.724861196792105
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1041 104
+ 313 163
+
+----------------------
+ Michigan Rules :
+ Rule_00: 13  3  4  7  2, Class: 0, CF: 0.9972502759262425, Fitness: 59
+ Rule_01:  1  2  9  2 11, Class: 0, CF: 0.36613639695136335, Fitness: 11
+ Rule_02: 12  4  4  2 13, Class: 1, CF: 0.3989608581623387, Fitness: 63
+ Rule_03: 11 12  6  4  3, Class: 0, CF: 0.6193590049126063, Fitness: 0
+ Rule_04: 12  1  1  1 13, Class: 0, CF: 0.010328503953477064, Fitness: 0
+ Rule_05:  9  1  3  7  7, Class: 0, CF: 1.0, Fitness: 46
+ Rule_06: 12  8  1  2  3, Class: 0, CF: 0.6482910778631881, Fitness: 16
+ Rule_07:  7  2  4  1  1, Class: 0, CF: 0.4864720982613673, Fitness: 192
+ Rule_08:  1 11  4  8  1, Class: 1, CF: 0.15164321419392257, Fitness: 97
+ Rule_09:  2  7  4  4 12, Class: 0, CF: 0.3419386638177313, Fitness: 78
+ Rule_10: 12  1 12  8  4, Class: 1, CF: 0.048645276793980674, Fitness: 0
+ Rule_11:  1  1 12  6  3, Class: 0, CF: 0.3197790859285017, Fitness: 0
+ Rule_12:  7 11  4  8 12, Class: 1, CF: 0.2301743360176679, Fitness: 59
+ Rule_13: 12  2 11  2 11, Class: 0, CF: 0.8737701744862258, Fitness: 67
+ Rule_14:  3 11  8  8  3, Class: 1, CF: 0.13376159553321632, Fitness: 0
+ Rule_15: 11 12  8  1  8, Class: 1, CF: 0.30362924832267946, Fitness: 13
+ Rule_16:  4  4  8  5  3, Class: 1, CF: 0.1561673219977917, Fitness: 35
+ Rule_17:  4  5  3  3  6, Class: 0, CF: 0.9598350330041441, Fitness: 0
+ Rule_18: 12 12  3  3  4, Class: 0, CF: 0.9567369266408039, Fitness: 8
+ Rule_19: 11  1  8  7  4, Class: 0, CF: 0.28816395077527734, Fitness: 15
+ Rule_20:  4  2  8  1  1, Class: 0, CF: 0.3119295114460836, Fitness: 13
+ Rule_21: 11  1 14 11  7, Class: 0, CF: 0.8044090300997835, Fitness: 69
+ Rule_22:  2 12  8  4  7, Class: 0, CF: 0.3715120140757182, Fitness: 94
+ Rule_23: 12  4 12  3 12, Class: 0, CF: 0.683374194873776, Fitness: 6
+ Rule_24:  1  4  1  7 11, Class: 0, CF: 0.7758252420950846, Fitness: 411
+ Rule_25:  7  4 12 12  7, Class: 0, CF: 0.32697858376492994, Fitness: 162
+ Rule_26:  3  1 11  2  1, Class: 0, CF: 0.3755486343373242, Fitness: 12
+ Rule_27: 12  4  8  1  1, Class: 0, CF: 0.19923451750222432, Fitness: 12
+ Rule_28:  8  4  4  3 11, Class: 0, CF: 0.8193405426957265, Fitness: 67
+ Rule_29:  8  2  3  4 11, Class: 0, CF: 0.9412375037452917, Fitness: 16
+
+------------------------------------------------------------------
+
+------------ pop_02 ------------
+ MissRate   : 29.117828500925352
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1122 23
+ 448 27
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8  2  1  4  7, Class: 0, CF: 0.8367929033864714, Fitness: 75
+ Rule_01:  5 12  4  7  7, Class: 0, CF: 0.9790335268251946, Fitness: 19
+ Rule_02:  5  4 12  7  7, Class: 0, CF: 0.990904511068778, Fitness: 122
+ Rule_03:  1  1  6 12  1, Class: 0, CF: 0.7432278524339913, Fitness: 3
+ Rule_04:  4  7 12 12 11, Class: 0, CF: 0.42173280561481774, Fitness: 8
+ Rule_05:  4 12  4  4  2, Class: 0, CF: 0.3485942037897072, Fitness: 103
+ Rule_06:  4 12  8  7  1, Class: 0, CF: 0.43820746982085423, Fitness: 25
+ Rule_07:  3  2  7  8  1, Class: 0, CF: 0.0854864692647328, Fitness: 0
+ Rule_08:  4  4  4  4 11, Class: 0, CF: 0.5316177963394528, Fitness: 551
+ Rule_09:  1  2  4  7  7, Class: 0, CF: 0.7252476728364499, Fitness: 120
+ Rule_10: 11  4  2  4  4, Class: 0, CF: 0.22519293074209834, Fitness: 100
+ Rule_11: 12  4  2  2  7, Class: 0, CF: 0.29030787053313034, Fitness: 11
+ Rule_12:  1 12  2  4 11, Class: 0, CF: 0.4612751574152172, Fitness: 61
+ Rule_13: 11 13  2  1 11, Class: 0, CF: 0.7495411044706748, Fitness: 0
+ Rule_14:  4 13  1  1  4, Class: 0, CF: 0.8256092227157401, Fitness: 139
+ Rule_15: 14  4  4  4  3, Class: 0, CF: 1.0, Fitness: 0
+ Rule_16:  1 11 12  8  6, Class: 1, CF: 0.24223850907753397, Fitness: 12
+ Rule_17:  2  8  9  7  4, Class: 0, CF: 0.49032708055989316, Fitness: 0
+ Rule_18: 12  1 12  8  7, Class: 0, CF: 0.09904021450387002, Fitness: 0
+ Rule_19:  2  8  1 11  4, Class: 0, CF: 0.8814183149179039, Fitness: 14
+ Rule_20:  1 12  8  9  1, Class: 1, CF: 0.17741586537887466, Fitness: 1
+ Rule_21:  2 12  8 12  1, Class: 0, CF: 0.246654403747969, Fitness: 0
+ Rule_22:  1 11 12  1  4, Class: 0, CF: 0.09961278070142643, Fitness: 1
+ Rule_23:  3  4  4 11 11, Class: 0, CF: 0.7355238054884767, Fitness: 35
+ Rule_24:  7  2  8 11  1, Class: 0, CF: 0.5991464344862548, Fitness: 160
+ Rule_25:  8  1  1  2  1, Class: 0, CF: 0.7640886263329671, Fitness: 17
+ Rule_26: 11  7  4  5  1, Class: 1, CF: 0.1044807757646058, Fitness: 37
+ Rule_27:  2  4  6 11 11, Class: 0, CF: 0.8960107094280827, Fitness: 5
+ Rule_28:  1 12  8 12  4, Class: 0, CF: 0.12366265161395029, Fitness: 0
+ Rule_29:  8  1 11  5  1, Class: 0, CF: 0.8383813461820822, Fitness: 1
+
+------------------------------------------------------------------
+
+------------ pop_03 ------------
+ MissRate   : 26.156693399136337
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1079 66
+ 358 118
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8 10  8  3  7, Class: 0, CF: 0.3368728350915795, Fitness: 0
+ Rule_01:  8 12  3 12  4, Class: 0, CF: 0.9320619266441539, Fitness: 10
+ Rule_02:  4  1  1 11 11, Class: 0, CF: 0.7775987580757853, Fitness: 98
+ Rule_03: 11 11  2  7  2, Class: 0, CF: 0.058823349099776046, Fitness: 5
+ Rule_04:  2  4  1 12  1, Class: 0, CF: 0.6497923189287069, Fitness: 114
+ Rule_05:  7  7 12  7  7, Class: 0, CF: 0.32246509990593086, Fitness: 63
+ Rule_06:  1  8 12  1  1, Class: 0, CF: 0.6372898539696166, Fitness: 27
+ Rule_07: 12 11  7  5  6, Class: 1, CF: 0.04563732400554965, Fitness: 0
+ Rule_08: 13  2 12  2  4, Class: 0, CF: 0.9714733734013228, Fitness: 14
+ Rule_09:  7  3  9  4  2, Class: 1, CF: 0.06978736248373663, Fitness: 0
+ Rule_10: 13 10  1  1 11, Class: 0, CF: 1.0, Fitness: 0
+ Rule_11:  4  2  4  2  4, Class: 0, CF: 0.3524038399613081, Fitness: 89
+ Rule_12:  4  7 13 10  7, Class: 0, CF: 0.6052395460590358, Fitness: 18
+ Rule_13:  4 13 12  7  1, Class: 0, CF: 0.7034663617963057, Fitness: 64
+ Rule_14:  7  3 11  4  6, Class: 0, CF: 0.052614115828412356, Fitness: 0
+ Rule_15:  1 13 11 11 11, Class: 0, CF: 0.9651633624227565, Fitness: 116
+ Rule_16: 13  7  4  2  3, Class: 0, CF: 0.9854386616039982, Fitness: 20
+ Rule_17:  7 12  4  1 11, Class: 0, CF: 0.5705147505753947, Fitness: 288
+ Rule_18:  1  8  1  1  2, Class: 0, CF: 0.7573542203124237, Fitness: 47
+ Rule_19: 11 11  7 13 11, Class: 1, CF: 0.10367582569197675, Fitness: 0
+ Rule_20:  4  1  2  7 11, Class: 0, CF: 0.6058877089360148, Fitness: 155
+ Rule_21:  4  4 12 12 12, Class: 0, CF: 0.2527583295489151, Fitness: 66
+ Rule_22: 14  7  4  4  3, Class: 0, CF: 1.0, Fitness: 13
+ Rule_23:  1 11  4  2  1, Class: 0, CF: 0.0034141508306169133, Fitness: 0
+ Rule_24:  7 11  8  1  3, Class: 0, CF: 0.09498636693513962, Fitness: 1
+ Rule_25:  7 10  4  4  7, Class: 0, CF: 0.15386611884376378, Fitness: 2
+ Rule_26:  4  7  8  8  1, Class: 1, CF: 0.19556407701270628, Fitness: 184
+ Rule_27: 11  7  1 12  3, Class: 1, CF: 7.084370856499378E-4, Fitness: 0
+ Rule_28: 12  7  7  2  7, Class: 0, CF: 0.5447431187038081, Fitness: 44
+ Rule_29:  2  7  7  2 11, Class: 0, CF: 0.705351274277344, Fitness: 183
+
+------------------------------------------------------------------
+
+------------ pop_04 ------------
+ MissRate   : 23.93584207279457
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1032 113
+ 275 201
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4 12  1  3  3, Class: 0, CF: 0.7914880599787528, Fitness: 2
+ Rule_01:  8  4  8  5  1, Class: 1, CF: 0.2106805533578444, Fitness: 0
+ Rule_02: 11  1 13 12  3, Class: 0, CF: 0.07096279370470704, Fitness: 0
+ Rule_03:  4  4  4  6 11, Class: 0, CF: 0.5668190040852238, Fitness: 15
+ Rule_04:  1  7  4  8  7, Class: 1, CF: 0.0293028554100202, Fitness: 0
+ Rule_05:  8  4  1  7  7, Class: 0, CF: 0.9015481038546977, Fitness: 153
+ Rule_06:  4  1 11 12  3, Class: 0, CF: 0.86287056356923, Fitness: 11
+ Rule_07: 11  4 13 12  1, Class: 0, CF: 0.13742320663307628, Fitness: 46
+ Rule_08:  2  1  3  1 12, Class: 0, CF: 0.8727983532648317, Fitness: 4
+ Rule_09:  7  1  4 12  4, Class: 0, CF: 0.11303477832870545, Fitness: 78
+ Rule_10:  1  8  1 11  5, Class: 0, CF: 0.8154906136272658, Fitness: 10
+ Rule_11:  7 13  8  8 11, Class: 0, CF: 0.31931896611068544, Fitness: 9
+ Rule_12:  8  7  7  4  4, Class: 0, CF: 0.9405482746777997, Fitness: 150
+ Rule_13:  9 11  1  7  3, Class: 0, CF: 1.0, Fitness: 17
+ Rule_14:  4  1  5 11  1, Class: 0, CF: 0.4897694451004624, Fitness: 61
+ Rule_15: 11  7  7  4 12, Class: 1, CF: 0.07167625261771748, Fitness: 1
+ Rule_16: 13 12  1  3  7, Class: 0, CF: 0.9689565148308754, Fitness: 0
+ Rule_17: 11  4  4 13  4, Class: 1, CF: 0.19489121532806275, Fitness: 42
+ Rule_18:  4 11  2  7  1, Class: 0, CF: 0.3913336503433751, Fitness: 37
+ Rule_19:  9  4 12 12  7, Class: 0, CF: 1.0, Fitness: 12
+ Rule_20: 12  1  2  2  8, Class: 1, CF: 0.40870908830367125, Fitness: 63
+ Rule_21:  8 12  7 12  2, Class: 0, CF: 0.8630795086154197, Fitness: 6
+ Rule_22:  7  7  8 11  1, Class: 0, CF: 0.475626331315949, Fitness: 197
+ Rule_23:  3  2 11  7 11, Class: 0, CF: 0.8982532379484327, Fitness: 10
+ Rule_24:  2  5  8  8  6, Class: 0, CF: 0.1428626076503734, Fitness: 0
+ Rule_25:  4  7  4 13  1, Class: 1, CF: 0.18697133437466973, Fitness: 208
+ Rule_26:  3  7 12 13  3, Class: 1, CF: 0.2198650115432219, Fitness: 0
+ Rule_27: 11  8  4 12  4, Class: 0, CF: 0.551997878212888, Fitness: 77
+ Rule_28:  4  8  7  4  7, Class: 0, CF: 0.851878776695377, Fitness: 403
+ Rule_29:  2 11  1  4  3, Class: 0, CF: 0.5588929215517646, Fitness: 9
+
+------------------------------------------------------------------
+
+------------ pop_05 ------------
+ MissRate   : 27.328809376927822
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1140 5
+ 438 38
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4  2 13  8  4, Class: 1, CF: 0.2212736944045106, Fitness: 38
+ Rule_01:  4  1  4  4 11, Class: 0, CF: 0.47359095449824706, Fitness: 452
+ Rule_02: 11 13  7 11  7, Class: 0, CF: 0.9679596277697482, Fitness: 11
+ Rule_03:  4  2  1  7  4, Class: 0, CF: 0.7783561752601027, Fitness: 279
+ Rule_04: 11  1  2 11  7, Class: 0, CF: 0.6443980237525366, Fitness: 154
+ Rule_05:  2 13  1  1  1, Class: 0, CF: 0.8195502202250786, Fitness: 10
+ Rule_06:  1  1  1  7  4, Class: 0, CF: 0.6075567468517677, Fitness: 69
+ Rule_07:  9  7  2 11  1, Class: 0, CF: 1.0, Fitness: 44
+ Rule_08:  3  4  3  5  1, Class: 1, CF: 0.06942782226572453, Fitness: 1
+ Rule_09:  1 12  8  1  6, Class: 0, CF: 0.26765128665475046, Fitness: 0
+ Rule_10: 11  1 13  1  3, Class: 0, CF: 0.47097618757289117, Fitness: 6
+ Rule_11:  1  5  6 12  4, Class: 0, CF: 0.8697980398397938, Fitness: 0
+ Rule_12:  2  3 14  2  1, Class: 0, CF: 0.24745469240594176, Fitness: 0
+ Rule_13: 11  7  8  2  1, Class: 1, CF: 0.00679720867547684, Fitness: 0
+ Rule_14:  4  7  4  1  3, Class: 0, CF: 0.3957514596071401, Fitness: 36
+ Rule_15:  4  8  5  1  1, Class: 0, CF: 0.41400771778789425, Fitness: 5
+ Rule_16:  2  7  8  8  1, Class: 1, CF: 0.13374816310086635, Fitness: 0
+ Rule_17:  8  6  4 12  7, Class: 0, CF: 0.9629561184562758, Fitness: 23
+ Rule_18:  7  1  2  4  1, Class: 0, CF: 0.16488207407113664, Fitness: 53
+ Rule_19:  4  2  8  1  1, Class: 0, CF: 0.3119295114460836, Fitness: 3
+ Rule_20: 12  7  2  7 11, Class: 0, CF: 0.48019257232731394, Fitness: 23
+ Rule_21:  7  4  1  3  7, Class: 0, CF: 0.7446012085961873, Fitness: 23
+ Rule_22:  1 12  3 11 12, Class: 0, CF: 0.938274011622825, Fitness: 0
+ Rule_23: 12  1  4  8 12, Class: 1, CF: 0.13912616814686452, Fitness: 4
+ Rule_24:  4  8  1 11  1, Class: 0, CF: 0.8691888320239556, Fitness: 152
+ Rule_25:  3  2  4  7  4, Class: 0, CF: 0.559075889104195, Fitness: 1
+ Rule_26:  2  8  3  3  4, Class: 0, CF: 0.9569982719541074, Fitness: 0
+ Rule_27:  8  7 12  2 12, Class: 0, CF: 0.7042528816418181, Fitness: 17
+ Rule_28: 12  1 12  2  6, Class: 0, CF: 0.039669501015945574, Fitness: 0
+ Rule_29:  4  7  4  1  7, Class: 0, CF: 0.47054038472760173, Fitness: 217
+
+------------------------------------------------------------------
+
+------------ pop_06 ------------
+ MissRate   : 27.0203578038248
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1060 85
+ 353 123
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8  8  9 13  3, Class: 1, CF: 0.6323986060778282, Fitness: 0
+ Rule_01:  1  5  3  2 12, Class: 0, CF: 0.9141634318755196, Fitness: 0
+ Rule_02:  4 11 14  8  3, Class: 0, CF: 0.3385689031531849, Fitness: 5
+ Rule_03:  2  8  4  7  3, Class: 0, CF: 0.7859264447551537, Fitness: 1
+ Rule_04:  7  1  2  9  6, Class: 1, CF: 0.02766492719974667, Fitness: 0
+ Rule_05:  4  4  1  7  7, Class: 0, CF: 0.802388251607394, Fitness: 531
+ Rule_06:  8 11  8  4  1, Class: 0, CF: 0.33062411256696644, Fitness: 31
+ Rule_07:  4  1  1  7 11, Class: 0, CF: 0.7693644138973963, Fitness: 65
+ Rule_08:  4  3 11  6 10, Class: 0, CF: 0.45171088742522225, Fitness: 0
+ Rule_09:  1 12  2 12 12, Class: 0, CF: 0.15069282120991612, Fitness: 23
+ Rule_10:  2 11 13  2  1, Class: 1, CF: 0.11610777609837997, Fitness: 10
+ Rule_11:  3  4 14 11  6, Class: 0, CF: 0.8625863220928012, Fitness: 0
+ Rule_12: 12 11  7  7  3, Class: 0, CF: 0.7731924692742972, Fitness: 4
+ Rule_13:  1 13 11  7  2, Class: 0, CF: 0.9390597572680875, Fitness: 28
+ Rule_14:  8  5  1  1 11, Class: 0, CF: 0.8259554059318024, Fitness: 0
+ Rule_15:  1  8 11  2  1, Class: 0, CF: 0.8539122933156682, Fitness: 22
+ Rule_16:  2  4 12  7  7, Class: 0, CF: 0.8010490002399426, Fitness: 155
+ Rule_17:  2  8  4 12 11, Class: 0, CF: 0.6797267518513724, Fitness: 75
+ Rule_18:  1  8  1  2  7, Class: 0, CF: 0.7006872410647933, Fitness: 47
+ Rule_19: 12  5 11  7  1, Class: 0, CF: 0.9524125987808445, Fitness: 32
+ Rule_20:  1  7  4  2  6, Class: 1, CF: 0.08320669451331386, Fitness: 36
+ Rule_21: 11 12 13 11 11, Class: 0, CF: 0.7926148675207003, Fitness: 105
+ Rule_22: 11  2  2 11 12, Class: 0, CF: 0.5439303841724361, Fitness: 32
+ Rule_23:  4  1  1  8 13, Class: 1, CF: 0.3666821930770481, Fitness: 75
+ Rule_24: 12  7  7  2  4, Class: 0, CF: 0.40657032385700576, Fitness: 60
+ Rule_25:  1 11 12  8  1, Class: 1, CF: 0.14971735397021213, Fitness: 87
+ Rule_26:  3 11 12  5  7, Class: 0, CF: 0.016856010414593614, Fitness: 0
+ Rule_27:  4 12  2  7 11, Class: 0, CF: 0.6475100043447084, Fitness: 146
+ Rule_28:  7  7 12  2  7, Class: 0, CF: 0.0032887934780443384, Fitness: 0
+ Rule_29:  4 12 12  1 12, Class: 0, CF: 0.4267046340439071, Fitness: 51
+
+------------------------------------------------------------------
+
+------------ pop_07 ------------
+ MissRate   : 28.871067242442937
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1087 58
+ 410 66
+
+----------------------
+ Michigan Rules :
+ Rule_00: 11  4  1 12 11, Class: 0, CF: 0.44448854493269296, Fitness: 91
+ Rule_01:  4 11  8  2  7, Class: 0, CF: 0.02090551478883307, Fitness: 5
+ Rule_02:  7 12  7 11 13, Class: 0, CF: 0.6421323691950473, Fitness: 12
+ Rule_03:  4  7  1  3 11, Class: 0, CF: 0.7123088889419775, Fitness: 13
+ Rule_04:  4  2 12  7  1, Class: 0, CF: 0.6712622261421113, Fitness: 126
+ Rule_05:  4 12  8  7  2, Class: 0, CF: 0.315393735170999, Fitness: 66
+ Rule_06:  2  1  4  3 11, Class: 0, CF: 0.783233751483672, Fitness: 12
+ Rule_07:  7 13  7  4 11, Class: 0, CF: 0.8180797733181604, Fitness: 75
+ Rule_08:  4  2  2 13  3, Class: 1, CF: 0.14247932551674714, Fitness: 58
+ Rule_09:  7 11 13 11  3, Class: 0, CF: 0.5816752434420405, Fitness: 2
+ Rule_10:  4  2 11  8  2, Class: 0, CF: 0.6945216073162022, Fitness: 31
+ Rule_11:  2  3  7  1  1, Class: 0, CF: 0.7761895528441545, Fitness: 33
+ Rule_12:  4  4  4  8  4, Class: 0, CF: 0.028292961200129696, Fitness: 27
+ Rule_13: 11  3  4  2  1, Class: 1, CF: 0.06720289825886905, Fitness: 53
+ Rule_14:  3  4 11  2 11, Class: 0, CF: 0.6499843615879395, Fitness: 15
+ Rule_15:  2  1  4  4  8, Class: 1, CF: 0.057103523892056085, Fitness: 13
+ Rule_16: 11  4  7  8  3, Class: 1, CF: 0.06485889136363276, Fitness: 0
+ Rule_17: 13  4 11  1  1, Class: 0, CF: 0.9792285348597318, Fitness: 56
+ Rule_18: 12  1  7  3  7, Class: 0, CF: 0.900987416032321, Fitness: 21
+ Rule_19: 12 12  1 11  2, Class: 0, CF: 0.7804530629670672, Fitness: 10
+ Rule_20:  7  1  8 11 11, Class: 0, CF: 0.5903478519488479, Fitness: 195
+ Rule_21:  4 11  2  7 11, Class: 0, CF: 0.507671135066968, Fitness: 50
+ Rule_22:  5  3  7  7  4, Class: 0, CF: 0.9998054172864432, Fitness: 52
+ Rule_23: 12 12  1 11  3, Class: 0, CF: 0.793327383637936, Fitness: 8
+ Rule_24:  4  8  1  4  1, Class: 0, CF: 0.7219176139740247, Fitness: 311
+ Rule_25:  4  7 12  7 11, Class: 0, CF: 0.6780974104961959, Fitness: 204
+ Rule_26:  4  8 11 12 11, Class: 0, CF: 0.9041615898213787, Fitness: 80
+ Rule_27: 14  7  1  7 12, Class: 0, CF: 1.0, Fitness: 2
+ Rule_28:  7 11 13 13  7, Class: 0, CF: 0.0165510209751929, Fitness: 0
+ Rule_29:  3 11 13  5  6, Class: 0, CF: 0.001188828337644443, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_08 ------------
+ MissRate   : 27.0203578038248
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1074 71
+ 367 109
+
+----------------------
+ Michigan Rules :
+ Rule_00:  1 11  7  4  1, Class: 0, CF: 0.24149352380784417, Fitness: 21
+ Rule_01: 11 12  8  5  4, Class: 1, CF: 0.20017323326409842, Fitness: 8
+ Rule_02:  1 12  8  9  3, Class: 1, CF: 0.18389886468695815, Fitness: 2
+ Rule_03:  7 11 12 12 12, Class: 1, CF: 0.21140037930574607, Fitness: 35
+ Rule_04:  7 12  7  7  3, Class: 0, CF: 0.8505892340818231, Fitness: 53
+ Rule_05:  4 13 11 12  6, Class: 0, CF: 0.7616771573486272, Fitness: 0
+ Rule_06:  1  4  5  2  3, Class: 0, CF: 0.14910480228449186, Fitness: 3
+ Rule_07: 11 12  8  4  7, Class: 0, CF: 0.3847173735380718, Fitness: 159
+ Rule_08:  4  2  1  4  1, Class: 0, CF: 0.6100894438703137, Fitness: 55
+ Rule_09: 11  1  4 12  3, Class: 0, CF: 0.14079513141401612, Fitness: 2
+ Rule_10:  2  4  4  1 11, Class: 0, CF: 0.6912643899173243, Fitness: 306
+ Rule_11:  4  3 11 13 13, Class: 0, CF: 0.2088240383266846, Fitness: 0
+ Rule_12:  2  1  4 11 11, Class: 0, CF: 0.8099855210514679, Fitness: 137
+ Rule_13:  4 13  4  4  7, Class: 0, CF: 0.7006899320828746, Fitness: 137
+ Rule_14:  2  5  1 12  1, Class: 0, CF: 0.7519758573403632, Fitness: 0
+ Rule_15:  1  2 12  4  2, Class: 0, CF: 0.27513593725992136, Fitness: 46
+ Rule_16:  7  4  4  8 10, Class: 1, CF: 0.33739759866302665, Fitness: 99
+ Rule_17:  2  7  2 12  2, Class: 0, CF: 0.1772026774271831, Fitness: 10
+ Rule_18:  2  1  3  4  3, Class: 0, CF: 0.8717124850184241, Fitness: 3
+ Rule_19:  1  4 14  7  1, Class: 0, CF: 0.645862778728481, Fitness: 29
+ Rule_20: 12  1  4 13 11, Class: 1, CF: 0.04899751427147914, Fitness: 0
+ Rule_21:  5  7  8  7  7, Class: 0, CF: 0.9839426929815482, Fitness: 18
+ Rule_22:  2  7  1  4 12, Class: 0, CF: 0.4566696758151283, Fitness: 63
+ Rule_23:  7  7  7 13 11, Class: 1, CF: 0.13945965895750345, Fitness: 26
+ Rule_24:  7  4  5  7  4, Class: 0, CF: 0.41885606794407404, Fitness: 121
+ Rule_25:  3  7  4  2  1, Class: 1, CF: 0.047776579381130446, Fitness: 0
+ Rule_26:  8  4  8  7  1, Class: 0, CF: 0.48050373907526267, Fitness: 9
+ Rule_27: 11  2  4  5  2, Class: 1, CF: 0.22904635301038478, Fitness: 10
+ Rule_28:  4  8  3  1 11, Class: 0, CF: 0.921717822236761, Fitness: 8
+ Rule_29:  4  8 11  4  4, Class: 0, CF: 0.9122594142119657, Fitness: 261
+
+------------------------------------------------------------------
+
+------------ pop_09 ------------
+ MissRate   : 27.0203578038248
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1132 13
+ 425 51
+
+----------------------
+ Michigan Rules :
+ Rule_00:  2  4  2  7 11, Class: 0, CF: 0.7056717873792395, Fitness: 61
+ Rule_01:  4  8 12 12  4, Class: 0, CF: 0.48954122079139073, Fitness: 34
+ Rule_02:  7 13 12  2  1, Class: 0, CF: 0.5417392550860782, Fitness: 13
+ Rule_03: 12  4 13  3 13, Class: 1, CF: 0.7044523864046677, Fitness: 4
+ Rule_04:  5  3  4  1  7, Class: 0, CF: 0.9983297701612442, Fitness: 30
+ Rule_05:  4  4 12 12  7, Class: 0, CF: 0.5034480662523828, Fitness: 162
+ Rule_06:  8  1  8  4  8, Class: 1, CF: 0.30824970515985006, Fitness: 2
+ Rule_07:  7  2  7  4  4, Class: 0, CF: 0.6012851198403676, Fitness: 97
+ Rule_08:  4  3  1  6  3, Class: 0, CF: 0.2384724675902854, Fitness: 7
+ Rule_09:  7  2  1  7  7, Class: 0, CF: 0.7809972535113966, Fitness: 163
+ Rule_10:  7  2  1  7  2, Class: 0, CF: 0.6896384513185159, Fitness: 15
+ Rule_11:  1  1  5  2  8, Class: 1, CF: 0.5328233532409457, Fitness: 32
+ Rule_12:  1 12  2 11  7, Class: 0, CF: 0.7171435709089113, Fitness: 205
+ Rule_13: 11  2 13  4 11, Class: 0, CF: 0.4106909257680924, Fitness: 38
+ Rule_14:  7  1  1 13  2, Class: 1, CF: 0.21955159642472122, Fitness: 26
+ Rule_15:  8  7  5  1 11, Class: 1, CF: 0.03206188806101751, Fitness: 0
+ Rule_16:  4  3  1  1 10, Class: 1, CF: 0.048142282345428944, Fitness: 0
+ Rule_17:  4 12  1  7  2, Class: 0, CF: 0.7190756869957101, Fitness: 27
+ Rule_18:  2  2  1 11  2, Class: 0, CF: 0.8445813179965795, Fitness: 0
+ Rule_19:  7  4  7  4  7, Class: 0, CF: 0.6033582984787141, Fitness: 329
+ Rule_20:  8  1  7  1  7, Class: 0, CF: 0.9612662896507136, Fitness: 215
+ Rule_21: 11  7 12 12  7, Class: 1, CF: 0.04437847269251205, Fitness: 0
+ Rule_22:  7  4  2 12  7, Class: 0, CF: 0.30649730223429783, Fitness: 133
+ Rule_23:  2  4  2  8  7, Class: 0, CF: 0.17300273505357033, Fitness: 8
+ Rule_24:  1 13  2  1 11, Class: 0, CF: 0.6989587383272544, Fitness: 8
+ Rule_25: 11  8  3  7  1, Class: 0, CF: 0.9272335893539915, Fitness: 0
+ Rule_26:  1 12 13  2  1, Class: 0, CF: 0.07021098292911199, Fitness: 6
+ Rule_27:  2  7 11 12 12, Class: 0, CF: 0.7960916420932576, Fitness: 4
+ Rule_28: 12 12  8  7  1, Class: 0, CF: 0.3467589309117194, Fitness: 2
+ Rule_29: 11  2  2  8  1, Class: 0, CF: 0.0034886308652817277, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_10 ------------
+ MissRate   : 25.478099938309683
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1120 25
+ 388 88
+
+----------------------
+ Michigan Rules :
+ Rule_00:  7  2  4 12  7, Class: 0, CF: 0.45765108882199246, Fitness: 142
+ Rule_01: 11 12  2  4  4, Class: 0, CF: 0.2815173967054372, Fitness: 35
+ Rule_02:  1  3  6  3 11, Class: 1, CF: 0.018935394611499068, Fitness: 0
+ Rule_03:  4  2  7  7  1, Class: 0, CF: 0.8810102875767079, Fitness: 254
+ Rule_04:  1  8  8  7  3, Class: 0, CF: 0.582793066463122, Fitness: 3
+ Rule_05:  8  4  4  7  1, Class: 0, CF: 0.8302614446340438, Fitness: 133
+ Rule_06:  7  7 13 12  4, Class: 1, CF: 0.18730410687631127, Fitness: 39
+ Rule_07:  7  1  1  4  4, Class: 0, CF: 0.24712228813892123, Fitness: 12
+ Rule_08:  7  1  4  7  7, Class: 0, CF: 0.5317146245416362, Fitness: 80
+ Rule_09:  3  4  5  1  1, Class: 0, CF: 0.5493923412885431, Fitness: 21
+ Rule_10:  1  7 14  7  1, Class: 0, CF: 0.5963867950923709, Fitness: 19
+ Rule_11: 12 13  4 12 12, Class: 0, CF: 0.5566546905833776, Fitness: 25
+ Rule_12:  4 12  4 11  7, Class: 0, CF: 0.7706294131493978, Fitness: 185
+ Rule_13:  4  4 12  1  6, Class: 0, CF: 0.30321576111511517, Fitness: 0
+ Rule_14:  7  3  1  9 11, Class: 0, CF: 0.19125773853181272, Fitness: 0
+ Rule_15:  2  2  3  1  7, Class: 0, CF: 0.9235537251465937, Fitness: 0
+ Rule_16:  1  7  7  4  4, Class: 0, CF: 0.3550929541334136, Fitness: 89
+ Rule_17: 12  7  2  1  3, Class: 0, CF: 0.2860222807704007, Fitness: 9
+ Rule_18:  1  3  4  4  8, Class: 1, CF: 0.2050369743120708, Fitness: 0
+ Rule_19:  1  8  1  4 11, Class: 0, CF: 0.7453282318735208, Fitness: 107
+ Rule_20:  1  4  8 11  3, Class: 0, CF: 0.6153850089368279, Fitness: 32
+ Rule_21:  3  5  4  7 12, Class: 0, CF: 0.7833317773109965, Fitness: 0
+ Rule_22:  7  4  7  1  1, Class: 0, CF: 0.6065519591664554, Fitness: 82
+ Rule_23:  4  1  4 11 12, Class: 0, CF: 0.6080155453413092, Fitness: 30
+ Rule_24:  3  4  1 12 12, Class: 0, CF: 0.18399101415990304, Fitness: 0
+ Rule_25: 12  2 12 12  1, Class: 0, CF: 0.42740044634826857, Fitness: 5
+ Rule_26: 12  7 13  4  4, Class: 1, CF: 0.2607441316924721, Fitness: 74
+ Rule_27:  2  7  7  2  7, Class: 0, CF: 0.7009342168707633, Fitness: 148
+ Rule_28: 13  4 12  4  7, Class: 0, CF: 0.9855383297398725, Fitness: 97
+ Rule_29:  3  2  2  4 12, Class: 0, CF: 0.19842687633705003, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_11 ------------
+ MissRate   : 28.439235040098705
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1145 0
+ 461 15
+
+----------------------
+ Michigan Rules :
+ Rule_00: 11  7  7  4  7, Class: 0, CF: 0.05793224077200554, Fitness: 0
+ Rule_01:  4 12  1  4  8, Class: 0, CF: 0.03879924339024288, Fitness: 0
+ Rule_02:  4 12  2  4  2, Class: 0, CF: 0.23526896965557698, Fitness: 25
+ Rule_03:  2  8 12 11 13, Class: 0, CF: 0.7901308101590008, Fitness: 1
+ Rule_04: 12 11 12  7  4, Class: 0, CF: 0.33408917127907856, Fitness: 0
+ Rule_05: 11 12 13  4 12, Class: 0, CF: 0.189122042255502, Fitness: 2
+ Rule_06:  9  7  1  7 11, Class: 0, CF: 1.0, Fitness: 58
+ Rule_07: 12  8  4 12  2, Class: 0, CF: 0.5187978558128641, Fitness: 22
+ Rule_08:  2  2  1  7  1, Class: 0, CF: 0.831539714966653, Fitness: 78
+ Rule_09: 11  1  1  4  7, Class: 0, CF: 0.27836664869149685, Fitness: 10
+ Rule_10:  9  1 11  4  4, Class: 0, CF: 1.0, Fitness: 2
+ Rule_11:  4  1 13  2  2, Class: 1, CF: 0.2184022184244554, Fitness: 15
+ Rule_12:  4  4  1  3  1, Class: 0, CF: 0.7732577217749812, Fitness: 27
+ Rule_13:  2  7  1  2  1, Class: 0, CF: 0.3922995045689056, Fitness: 92
+ Rule_14:  7  7  7  4  7, Class: 0, CF: 0.25659037623138636, Fitness: 65
+ Rule_15:  8  2  3 12  3, Class: 0, CF: 0.9360253047737407, Fitness: 0
+ Rule_16:  4  4 11 12  1, Class: 0, CF: 0.8685879154384677, Fitness: 158
+ Rule_17:  7 13 11  4  4, Class: 0, CF: 0.8780628672628168, Fitness: 126
+ Rule_18:  2  1 11 11  1, Class: 0, CF: 0.9319628369292157, Fitness: 10
+ Rule_19: 11 11  4 14  1, Class: 0, CF: 0.20204860753597842, Fitness: 11
+ Rule_20:  4  4  8  4  7, Class: 0, CF: 0.26778233029788145, Fitness: 261
+ Rule_21:  2 11  1  7  4, Class: 0, CF: 0.7594841123110219, Fitness: 107
+ Rule_22:  2  2  7  3  7, Class: 0, CF: 0.930971357763938, Fitness: 0
+ Rule_23:  7  4 13  4  3, Class: 0, CF: 0.2125980891406185, Fitness: 31
+ Rule_24: 11 12  8  4  1, Class: 0, CF: 0.2633305614505609, Fitness: 17
+ Rule_25:  1  2  4  4  4, Class: 0, CF: 0.40918067153069393, Fitness: 136
+ Rule_26:  7  7  4 12  4, Class: 1, CF: 0.05255278731688984, Fitness: 0
+ Rule_27: 13  7  4  2  2, Class: 0, CF: 0.9809265318292917, Fitness: 18
+ Rule_28:  8 12  8  8  3, Class: 0, CF: 0.048232639513695164, Fitness: 0
+ Rule_29:  7  4  4 11  4, Class: 0, CF: 0.6325849821247729, Fitness: 349
+
+------------------------------------------------------------------
+
+------------ pop_12 ------------
+ MissRate   : 27.884022208513265
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1110 35
+ 417 59
+
+----------------------
+ Michigan Rules :
+ Rule_00: 11  4  4  4  3, Class: 0, CF: 0.2567072355342006, Fitness: 79
+ Rule_01: 12  4 12 12  3, Class: 0, CF: 0.4811885173085102, Fitness: 0
+ Rule_02:  4  4  4 12  3, Class: 0, CF: 0.4826642157178609, Fitness: 131
+ Rule_03:  6 12  2  7 12, Class: 0, CF: 0.5734968120604689, Fitness: 0
+ Rule_04:  7  1  1 11  4, Class: 0, CF: 0.5953442358144854, Fitness: 49
+ Rule_05:  1  1 12  7  2, Class: 0, CF: 0.42362608308246674, Fitness: 46
+ Rule_06: 11  7 11  8 11, Class: 1, CF: 0.12120163606027101, Fitness: 6
+ Rule_07:  3  1 13  4  7, Class: 0, CF: 0.3063871487066948, Fitness: 20
+ Rule_08:  4  4 12  3  8, Class: 0, CF: 0.3716345909883414, Fitness: 7
+ Rule_09:  2  4  8  2  1, Class: 0, CF: 0.12185179767830401, Fitness: 20
+ Rule_10:  4  3  8  1  5, Class: 1, CF: 0.5155188668891564, Fitness: 29
+ Rule_11:  8  1  2  4  1, Class: 0, CF: 0.5732103596096039, Fitness: 129
+ Rule_12:  1 12  5  3  7, Class: 0, CF: 0.6914345817096686, Fitness: 62
+ Rule_13:  2 12  4  1 12, Class: 0, CF: 0.5436767136486904, Fitness: 61
+ Rule_14:  7  4  8  7  1, Class: 0, CF: 0.43033977571411763, Fitness: 206
+ Rule_15:  7  7 12  2  6, Class: 1, CF: 0.13972218202001963, Fitness: 59
+ Rule_16:  7  4  8  4  6, Class: 0, CF: 0.0382726403081739, Fitness: 0
+ Rule_17:  7  8 11  8 11, Class: 0, CF: 0.6412325427124281, Fitness: 57
+ Rule_18:  7 12  8 12 11, Class: 0, CF: 0.29550741954159165, Fitness: 87
+ Rule_19: 11  8  2  7 12, Class: 0, CF: 0.6637420488048222, Fitness: 23
+ Rule_20:  8  7  2 11  8, Class: 0, CF: 0.38382100386633167, Fitness: 1
+ Rule_21: 12  8  1  3  1, Class: 0, CF: 0.8563970142290271, Fitness: 0
+ Rule_22: 11  7  4  6 11, Class: 0, CF: 0.48825756755404726, Fitness: 11
+ Rule_23: 12  8 13  2  4, Class: 0, CF: 0.018313724613414073, Fitness: 0
+ Rule_24:  7  1 14  3  7, Class: 0, CF: 0.7344288075346246, Fitness: 12
+ Rule_25: 12  4  1 11  7, Class: 0, CF: 0.8274634115158206, Fitness: 196
+ Rule_26: 12  8 11 11  1, Class: 0, CF: 0.9622317421871995, Fitness: 144
+ Rule_27: 13  2  7 11 11, Class: 0, CF: 0.9760932429811269, Fitness: 87
+ Rule_28:  8  8 12  4  7, Class: 0, CF: 0.6988723351137021, Fitness: 67
+ Rule_29:  4  8  2  1  2, Class: 0, CF: 0.5711791768318292, Fitness: 32
+
+------------------------------------------------------------------
+
+------------ pop_13 ------------
+ MissRate   : 25.6631708821715
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1106 39
+ 377 99
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4  7  7 12  7, Class: 0, CF: 0.6549747346515378, Fitness: 141
+ Rule_01:  8 12 12  4 11, Class: 0, CF: 0.8137306307649312, Fitness: 78
+ Rule_02:  7  1  4 12 10, Class: 1, CF: 0.2772705626262222, Fitness: 9
+ Rule_03: 11  7  4 13  8, Class: 1, CF: 0.3870048882937811, Fitness: 90
+ Rule_04: 13  7  8  4  7, Class: 0, CF: 0.9737349194034539, Fitness: 23
+ Rule_05:  2  1  7  4  7, Class: 0, CF: 0.824444233483448, Fitness: 274
+ Rule_06:  7  7  2 12  1, Class: 1, CF: 0.05207431892771286, Fitness: 0
+ Rule_07:  3  7  5  2  1, Class: 0, CF: 0.15320426060516068, Fitness: 0
+ Rule_08:  4  1 13  4 12, Class: 1, CF: 0.14047631555378692, Fitness: 15
+ Rule_09:  4  2  2  4  7, Class: 0, CF: 0.4772671117592724, Fitness: 278
+ Rule_10:  2 11 12  2  4, Class: 0, CF: 0.29644957955794693, Fitness: 16
+ Rule_11:  1  1 12 11  3, Class: 0, CF: 0.6390732531896874, Fitness: 4
+ Rule_12:  2  2  8  2  3, Class: 0, CF: 0.16367561427758526, Fitness: 1
+ Rule_13:  4  2  1 11  4, Class: 0, CF: 0.8292322103201571, Fitness: 229
+ Rule_14: 11  4  4  8  1, Class: 1, CF: 0.06662391219761976, Fitness: 5
+ Rule_15: 11 12 13  2  4, Class: 0, CF: 0.1801865097039841, Fitness: 5
+ Rule_16:  7  4  4  3 11, Class: 0, CF: 0.716518431590041, Fitness: 172
+ Rule_17:  4  1  7 13  7, Class: 1, CF: 0.005329760894225322, Fitness: 0
+ Rule_18: 11  2  4  2  4, Class: 0, CF: 0.18641983812984053, Fitness: 7
+ Rule_19:  1  4 14  2 12, Class: 1, CF: 0.01743284219750274, Fitness: 0
+ Rule_20:  4  4  2  8  1, Class: 1, CF: 0.03329949909858487, Fitness: 0
+ Rule_21:  8  4  8  7  7, Class: 0, CF: 0.5458778116360081, Fitness: 7
+ Rule_22:  2  4  5  4  6, Class: 0, CF: 0.06694014594733999, Fitness: 0
+ Rule_23: 13  7  2  3  7, Class: 0, CF: 0.9751658131649629, Fitness: 1
+ Rule_24:  4  1  4  1 11, Class: 0, CF: 0.5528961463375945, Fitness: 164
+ Rule_25:  4  1  1  2 10, Class: 1, CF: 0.17254774038815635, Fitness: 19
+ Rule_26:  3  7  8 11  1, Class: 0, CF: 0.5257722831959915, Fitness: 7
+ Rule_27:  1  7  9 11  2, Class: 0, CF: 0.5273963508933437, Fitness: 21
+ Rule_28: 12 11  4  3  7, Class: 0, CF: 0.5147223629348223, Fitness: 4
+ Rule_29:  4  4  4 11  3, Class: 0, CF: 0.7419430377801381, Fitness: 51
+
+------------------------------------------------------------------
+
+------------ pop_14 ------------
+ MissRate   : 24.922887106724247
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1113 32
+ 372 104
+
+----------------------
+ Michigan Rules :
+ Rule_00:  7 11 13  3 11, Class: 0, CF: 0.626028662029795, Fitness: 30
+ Rule_01:  2  3  7  1  1, Class: 0, CF: 0.7761895528441545, Fitness: 0
+ Rule_02:  4  1  1  1  1, Class: 0, CF: 0.554954119066858, Fitness: 150
+ Rule_03:  7 11  4  5  4, Class: 1, CF: 0.10576992706074306, Fitness: 17
+ Rule_04:  7  3  8  5 12, Class: 1, CF: 0.10710547163432826, Fitness: 0
+ Rule_05:  3  7 12  8  3, Class: 1, CF: 0.21587636324005488, Fitness: 25
+ Rule_06:  4  1  8  1 11, Class: 0, CF: 0.33726455198486527, Fitness: 24
+ Rule_07:  1 13  8  3  1, Class: 0, CF: 0.6905316987680823, Fitness: 15
+ Rule_08:  4  8  2 12  1, Class: 0, CF: 0.4991770473863495, Fitness: 95
+ Rule_09:  2 11  1  1 11, Class: 0, CF: 0.7203553111916543, Fitness: 0
+ Rule_10: 11 12  2 12  3, Class: 0, CF: 0.3327681362597481, Fitness: 0
+ Rule_11:  7  4  8  4  4, Class: 0, CF: 0.10626000036289662, Fitness: 18
+ Rule_12:  7 12  8 12  1, Class: 0, CF: 0.16919022872267764, Fitness: 6
+ Rule_13:  7  7  2  4  2, Class: 1, CF: 0.06284733755749516, Fitness: 8
+ Rule_14:  3  4 14  4 12, Class: 0, CF: 0.15172379355183097, Fitness: 0
+ Rule_15:  4  7 13  4  2, Class: 1, CF: 0.22392991324886968, Fitness: 56
+ Rule_16:  3  1  4  1 12, Class: 0, CF: 0.10113703132573093, Fitness: 0
+ Rule_17:  3  4  5  4  4, Class: 0, CF: 0.2611707743557141, Fitness: 2
+ Rule_18:  2 11  1  7 11, Class: 0, CF: 0.8473820275472816, Fitness: 112
+ Rule_19:  4  7  2  2 11, Class: 0, CF: 0.20284488876817042, Fitness: 100
+ Rule_20:  2  4  4  4  7, Class: 0, CF: 0.6287392150652404, Fitness: 756
+ Rule_21:  7  1  5  2 12, Class: 1, CF: 0.07685144150142964, Fitness: 0
+ Rule_22: 13  2  4  8  1, Class: 0, CF: 0.964158540051161, Fitness: 5
+ Rule_23: 12 12  2  3  1, Class: 0, CF: 0.5769282207455759, Fitness: 47
+ Rule_24: 11  4  5  7 11, Class: 0, CF: 0.7030555390026578, Fitness: 122
+ Rule_25:  4  5  8  2  7, Class: 0, CF: 0.4117343211947957, Fitness: 0
+ Rule_26:  4  1  8  8 12, Class: 1, CF: 0.21076889943193322, Fitness: 30
+ Rule_27:  7  7 13 13 11, Class: 1, CF: 0.044332239832890474, Fitness: 0
+ Rule_28:  1  3  5  1  3, Class: 0, CF: 0.3286843662284633, Fitness: 0
+ Rule_29:  2 13  4  4  5, Class: 0, CF: 0.8922000078343137, Fitness: 3
+
+------------------------------------------------------------------
+
+------------ pop_15 ------------
+ MissRate   : 28.562615669339912
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1144 1
+ 462 14
+
+----------------------
+ Michigan Rules :
+ Rule_00: 11  7  7 12 11, Class: 0, CF: 0.07986589049421222, Fitness: 0
+ Rule_01:  1  7  2  2  7, Class: 0, CF: 0.16281330032942654, Fitness: 55
+ Rule_02:  1  2  4  4  4, Class: 0, CF: 0.40918067153069393, Fitness: 172
+ Rule_03:  1  8  2  7  1, Class: 0, CF: 0.705091594656204, Fitness: 60
+ Rule_04:  2 11  2  7  7, Class: 0, CF: 0.705900387348289, Fitness: 39
+ Rule_05:  1  4 13 11 11, Class: 0, CF: 0.61533169613664, Fitness: 128
+ Rule_06: 12  2 12 11  2, Class: 0, CF: 0.7305920426528598, Fitness: 15
+ Rule_07:  7 13 12  1 11, Class: 0, CF: 0.6966421518406954, Fitness: 43
+ Rule_08:  2  4  4  8  4, Class: 0, CF: 0.1274637649005942, Fitness: 0
+ Rule_09:  7  7 13  1  7, Class: 0, CF: 0.35940813215873724, Fitness: 113
+ Rule_10:  4  7  1  7 11, Class: 0, CF: 0.7286086934127407, Fitness: 189
+ Rule_11:  1  7 12 11  8, Class: 1, CF: 0.029633579022300127, Fitness: 0
+ Rule_12:  3  2  5  8  4, Class: 1, CF: 0.035711909501072836, Fitness: 0
+ Rule_13: 12  8  4  2  1, Class: 0, CF: 0.5311693813990256, Fitness: 56
+ Rule_14:  1 12 12  8  2, Class: 1, CF: 0.09265075478697948, Fitness: 2
+ Rule_15: 11  4  8  8  1, Class: 1, CF: 0.058790254109924334, Fitness: 0
+ Rule_16:  7  4  8  1  2, Class: 0, CF: 0.16284641396892297, Fitness: 7
+ Rule_17: 11  2  4  8 10, Class: 1, CF: 0.3299772779606851, Fitness: 7
+ Rule_18:  1  1  4 12 11, Class: 0, CF: 0.4007332688596885, Fitness: 98
+ Rule_19: 11  7 11  2  2, Class: 0, CF: 0.18096895914755406, Fitness: 1
+ Rule_20: 13  7  7  4  4, Class: 0, CF: 0.9929138303666316, Fitness: 169
+ Rule_21:  7  4  2  3  4, Class: 0, CF: 0.5942352194732166, Fitness: 78
+ Rule_22:  1 12  1  7  3, Class: 0, CF: 0.7779883592210526, Fitness: 4
+ Rule_23: 11  2  8 11  3, Class: 0, CF: 0.731549365133052, Fitness: 3
+ Rule_24:  7 12  8  1  4, Class: 0, CF: 0.3040970473508955, Fitness: 39
+ Rule_25:  9  7 12  8  7, Class: 0, CF: 1.0, Fitness: 4
+ Rule_26:  8  1  8  4  3, Class: 0, CF: 0.3410720751509262, Fitness: 5
+ Rule_27:  7  1  4  2  1, Class: 0, CF: 0.060611663954435624, Fitness: 31
+ Rule_28:  7  2  7  4  1, Class: 0, CF: 0.6114276301926868, Fitness: 297
+ Rule_29:  4 12  2  5  6, Class: 1, CF: 0.2557528286950912, Fitness: 6
+
+------------------------------------------------------------------
+
+------------ pop_16 ------------
+ MissRate   : 29.36458975940777
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1145 0
+ 476 0
+
+----------------------
+ Michigan Rules :
+ Rule_00: 11 13  1  4  4, Class: 0, CF: 0.7543359961044216, Fitness: 99
+ Rule_01:  8  4  1  4  7, Class: 0, CF: 0.8431833354699994, Fitness: 297
+ Rule_02: 11  7  5  4  1, Class: 0, CF: 0.2259478854611836, Fitness: 0
+ Rule_03:  2 11  5  3  8, Class: 1, CF: 0.2934346424026866, Fitness: 0
+ Rule_04:  7  7  2  1  1, Class: 0, CF: 0.2586381994407623, Fitness: 69
+ Rule_05:  1  4 13  7 11, Class: 0, CF: 0.4886378383214691, Fitness: 49
+ Rule_06:  3 12  2  1  4, Class: 0, CF: 0.4557414640372115, Fitness: 3
+ Rule_07:  4  4  5  1  7, Class: 0, CF: 0.4016631238075309, Fitness: 0
+ Rule_08: 12  8  9  7 11, Class: 0, CF: 0.3899605491775333, Fitness: 0
+ Rule_09:  8  7  4 11  2, Class: 0, CF: 0.8613119918300876, Fitness: 30
+ Rule_10: 12  8  7  7 12, Class: 0, CF: 0.8863175437618275, Fitness: 93
+ Rule_11:  1 11  2 11  4, Class: 0, CF: 0.38057208155715183, Fitness: 22
+ Rule_12:  4 10  7  7  3, Class: 0, CF: 0.7291219141715595, Fitness: 9
+ Rule_13: 12  2  1  4  2, Class: 0, CF: 0.5809483159305266, Fitness: 28
+ Rule_14:  3 11 13  2  4, Class: 1, CF: 0.025490838523682502, Fitness: 0
+ Rule_15:  3  2  4  1  3, Class: 0, CF: 0.47902567699613785, Fitness: 1
+ Rule_16: 12  4  2  7  7, Class: 0, CF: 0.5915192859265257, Fitness: 78
+ Rule_17:  1  4  7  2  7, Class: 0, CF: 0.5764636537145633, Fitness: 166
+ Rule_18:  7 12 12 12  7, Class: 0, CF: 0.41344966020474283, Fitness: 99
+ Rule_19:  8  7  3  1  7, Class: 0, CF: 0.9837405107218886, Fitness: 1
+ Rule_20:  7  2  6  8  3, Class: 0, CF: 0.4471269991604918, Fitness: 0
+ Rule_21:  8 12  4  8  7, Class: 0, CF: 0.5557926075200139, Fitness: 5
+ Rule_22: 11 12  1  2  4, Class: 0, CF: 0.1866435380751339, Fitness: 1
+ Rule_23: 11  2  2  1  2, Class: 0, CF: 0.3740922207292421, Fitness: 5
+ Rule_24:  7 11  5  8  1, Class: 1, CF: 0.15925353333496073, Fitness: 0
+ Rule_25:  4  4  2  1  7, Class: 0, CF: 0.5326503248941415, Fitness: 303
+ Rule_26: 12 12 12  1  8, Class: 0, CF: 0.05749062573312025, Fitness: 0
+ Rule_27:  5 11  7  3 11, Class: 0, CF: 0.9997222328831568, Fitness: 30
+ Rule_28: 12  4  4  4  1, Class: 0, CF: 0.41582198572065066, Fitness: 233
+ Rule_29: 11  2  1  4  6, Class: 0, CF: 0.24464591384448076, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_17 ------------
+ MissRate   : 28.809376927822335
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1124 21
+ 445 30
+
+----------------------
+ Michigan Rules :
+ Rule_00:  1  1  7  8  1, Class: 0, CF: 0.09284341815683028, Fitness: 2
+ Rule_01:  7  7  1  6 12, Class: 0, CF: 0.10702661902256727, Fitness: 0
+ Rule_02:  2  1 13  1  3, Class: 0, CF: 0.2771268204532429, Fitness: 8
+ Rule_03:  2 12  7 12  4, Class: 0, CF: 0.7683139321016108, Fitness: 55
+ Rule_04:  3  3  4  5  8, Class: 1, CF: 0.34336598507977234, Fitness: 10
+ Rule_05:  4  6  8  1  7, Class: 0, CF: 0.20722270245012986, Fitness: 3
+ Rule_06:  8  2  2  3  1, Class: 0, CF: 0.6640580823891586, Fitness: 2
+ Rule_07:  4  2  4  4  1, Class: 0, CF: 0.47917761046163454, Fitness: 390
+ Rule_08:  8  4  7 11 12, Class: 0, CF: 0.9706723903078417, Fitness: 20
+ Rule_09:  4  4 12 12  6, Class: 0, CF: 0.3290674897006487, Fitness: 1
+ Rule_10:  7  7  7  1  1, Class: 0, CF: 0.25742159110741314, Fitness: 47
+ Rule_11:  2  8 11  7 11, Class: 0, CF: 0.9477645393391871, Fitness: 186
+ Rule_12: 11  4  4  1 13, Class: 1, CF: 0.19549763672074594, Fitness: 28
+ Rule_13: 12  2  1 11 11, Class: 0, CF: 0.8408775275159472, Fitness: 82
+ Rule_14:  8  9  1  1 12, Class: 0, CF: 0.8815656660941689, Fitness: 0
+ Rule_15:  1  8  4  2  1, Class: 0, CF: 0.5132056240374436, Fitness: 12
+ Rule_16:  1  7  4  2  7, Class: 0, CF: 0.16868654746397338, Fitness: 111
+ Rule_17: 11  4  2  2  4, Class: 0, CF: 0.12620746367693236, Fitness: 7
+ Rule_18:  1  2  7  1  4, Class: 0, CF: 0.7330782018257229, Fitness: 91
+ Rule_19: 12  8  1  3 11, Class: 0, CF: 0.8504295144086357, Fitness: 0
+ Rule_20:  3  5  8  7  1, Class: 0, CF: 0.6912447230882295, Fitness: 0
+ Rule_21:  6  1 12  8 13, Class: 0, CF: 0.22061280258671012, Fitness: 0
+ Rule_22:  4 12  5  1  4, Class: 0, CF: 0.300988921309677, Fitness: 98
+ Rule_23: 12 12  5  1 11, Class: 0, CF: 0.31184898421955287, Fitness: 59
+ Rule_24:  8  4 11  2  7, Class: 0, CF: 0.9543619771041756, Fitness: 13
+ Rule_25:  7  4  8 13 11, Class: 1, CF: 0.09973864281717348, Fitness: 13
+ Rule_26:  7  1  5  4  1, Class: 0, CF: 0.16286004509704144, Fitness: 28
+ Rule_27:  4  5  1  1  2, Class: 0, CF: 0.8407318801527599, Fitness: 0
+ Rule_28:  8  1  7  7 11, Class: 0, CF: 0.9719284537142205, Fitness: 239
+ Rule_29:  4  8  4  2  7, Class: 0, CF: 0.6112859952477461, Fitness: 115
+
+------------------------------------------------------------------
+
+------------ pop_18 ------------
+ MissRate   : 27.69895126465145
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1124 21
+ 428 48
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4 12  2  4  1, Class: 0, CF: 0.34966482574197744, Fitness: 124
+ Rule_01:  9 12  7  4  2, Class: 0, CF: 1.0, Fitness: 1
+ Rule_02:  4  7  3  4  2, Class: 0, CF: 0.7269160905774923, Fitness: 18
+ Rule_03: 13  8  1  3  1, Class: 0, CF: 0.9030791686654236, Fitness: 1
+ Rule_04: 11  1 12  4  4, Class: 0, CF: 0.01914199153112839, Fitness: 0
+ Rule_05:  8  7 14  7 11, Class: 0, CF: 0.020381159721121422, Fitness: 0
+ Rule_06:  7  3  7  4  7, Class: 0, CF: 0.03619156960722114, Fitness: 1
+ Rule_07:  2 11  2  7  4, Class: 0, CF: 0.5826710781361065, Fitness: 70
+ Rule_08:  8  3 12 11  1, Class: 0, CF: 0.9634301459205634, Fitness: 17
+ Rule_09:  3  1  4 13  4, Class: 1, CF: 0.15804729340490165, Fitness: 0
+ Rule_10: 11  4  4  8  7, Class: 0, CF: 0.045548625904337836, Fitness: 0
+ Rule_11:  2  8  6  1  7, Class: 0, CF: 0.9135580852352345, Fitness: 1
+ Rule_12: 12  2 12  7  7, Class: 0, CF: 0.704037211383223, Fitness: 125
+ Rule_13:  1  2  8 13  8, Class: 1, CF: 0.5802647068272349, Fitness: 27
+ Rule_14: 12  7  2  4  3, Class: 0, CF: 0.12564723469080397, Fitness: 0
+ Rule_15:  7 13 11  7  4, Class: 0, CF: 0.9365283512551408, Fitness: 200
+ Rule_16:  7 11 13  8  2, Class: 1, CF: 0.34218092572618075, Fitness: 42
+ Rule_17:  7  2  1  2  1, Class: 0, CF: 0.35662284686058654, Fitness: 137
+ Rule_18:  5  1  3  7  2, Class: 0, CF: 0.9915408953706707, Fitness: 0
+ Rule_19:  1  2 12  8  7, Class: 0, CF: 0.14870247693335448, Fitness: 1
+ Rule_20:  1  1 12  1 12, Class: 0, CF: 0.20244185045566354, Fitness: 0
+ Rule_21:  2  5  1  7  7, Class: 0, CF: 0.8816115258090216, Fitness: 4
+ Rule_22: 11  7  5  1 11, Class: 0, CF: 0.6075830462710697, Fitness: 123
+ Rule_23:  3  4 13  4  7, Class: 0, CF: 0.3881890089793574, Fitness: 21
+ Rule_24:  4  7 13  1 11, Class: 0, CF: 0.29280896536807943, Fitness: 61
+ Rule_25:  4  7  7 11  4, Class: 0, CF: 0.8106776047676483, Fitness: 195
+ Rule_26:  8  2  4 12  1, Class: 0, CF: 0.7075462127568781, Fitness: 33
+ Rule_27:  4 12  4  4  4, Class: 0, CF: 0.4194448846122749, Fitness: 316
+ Rule_28: 11  1 11 12  7, Class: 0, CF: 0.5952770989883682, Fitness: 26
+ Rule_29: 13  2  7 12  7, Class: 0, CF: 0.9823015073826911, Fitness: 77
+
+------------------------------------------------------------------
+
+------------ pop_19 ------------
+ MissRate   : 26.773596545342382
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1117 28
+ 406 70
+
+----------------------
+ Michigan Rules :
+ Rule_00:  2  3  7  1  1, Class: 0, CF: 0.7761895528441545, Fitness: 47
+ Rule_01:  7 13 11 11  7, Class: 0, CF: 0.9685058967558204, Fitness: 36
+ Rule_02:  2  3  4 13 11, Class: 0, CF: 0.0462724122947602, Fitness: 0
+ Rule_03:  7  2  2  1 11, Class: 0, CF: 0.569831228796347, Fitness: 80
+ Rule_04:  1  7  7  4  6, Class: 0, CF: 0.11067343362385595, Fitness: 3
+ Rule_05: 12 13  6  8 11, Class: 0, CF: 0.631258741913868, Fitness: 0
+ Rule_06:  4  1  4  4  2, Class: 0, CF: 0.2563046302772125, Fitness: 71
+ Rule_07:  1  4  2  3 11, Class: 0, CF: 0.7151700805296588, Fitness: 220
+ Rule_08:  2 11  3  4  3, Class: 0, CF: 0.843849565642729, Fitness: 3
+ Rule_09: 12 13  4  4 11, Class: 0, CF: 0.6753380359270245, Fitness: 89
+ Rule_10:  2  1 12 12  7, Class: 0, CF: 0.629358017413798, Fitness: 81
+ Rule_11:  4  2  3  4 11, Class: 0, CF: 0.8805004315481355, Fitness: 31
+ Rule_12:  1 12  4 12 11, Class: 0, CF: 0.5316785273012601, Fitness: 152
+ Rule_13:  8 12  1  1  2, Class: 0, CF: 0.7837723762925177, Fitness: 18
+ Rule_14:  7  3  7  5  1, Class: 1, CF: 0.07649268143022225, Fitness: 1
+ Rule_15: 12  1  8  1  2, Class: 1, CF: 0.00604697928376785, Fitness: 0
+ Rule_16: 13  4  4  8  1, Class: 0, CF: 0.965709122102949, Fitness: 27
+ Rule_17:  4  4  1 12  4, Class: 0, CF: 0.5110306426420983, Fitness: 174
+ Rule_18: 11 11  7  2  2, Class: 1, CF: 0.07374459081681639, Fitness: 0
+ Rule_19: 11  2 12  2  3, Class: 0, CF: 0.07928915871973485, Fitness: 0
+ Rule_20: 12 11  4 12  7, Class: 0, CF: 0.09279894341057382, Fitness: 0
+ Rule_21: 12  8 11  7  7, Class: 0, CF: 0.9560122459514901, Fitness: 237
+ Rule_22:  7  1 14  2  7, Class: 0, CF: 0.45994680234898655, Fitness: 9
+ Rule_23:  1  7  4  2  3, Class: 0, CF: 0.0533642513920225, Fitness: 50
+ Rule_24: 12  8  2 13 11, Class: 1, CF: 0.029756089848972156, Fitness: 0
+ Rule_25:  4  4 13  5  4, Class: 1, CF: 0.2923811672887304, Fitness: 22
+ Rule_26:  5  7  1  1  7, Class: 0, CF: 0.9949900091308295, Fitness: 128
+ Rule_27: 12  1 13  2  8, Class: 1, CF: 0.6483045851232241, Fitness: 48
+ Rule_28:  4  4  2 13 12, Class: 1, CF: 0.33363218460631927, Fitness: 27
+ Rule_29:  4 12  4  8 11, Class: 0, CF: 0.2121320149108601, Fitness: 67
+
+------------------------------------------------------------------
+
+------------ pop_20 ------------
+ MissRate   : 27.390499691548424
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1127 18
+ 426 50
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8  1  7  4  7, Class: 0, CF: 0.9508202336408438, Fitness: 232
+ Rule_01:  7  3  4 13  5, Class: 1, CF: 0.3527999974796049, Fitness: 38
+ Rule_02:  3 12  4  8  1, Class: 1, CF: 0.062177128255364034, Fitness: 0
+ Rule_03:  1  4 13  2  6, Class: 1, CF: 0.070278827996614, Fitness: 1
+ Rule_04:  1  2  8  7  5, Class: 1, CF: 0.2348861672499747, Fitness: 5
+ Rule_05: 12  4  1 11  3, Class: 0, CF: 0.8025668607299079, Fitness: 19
+ Rule_06:  4  4  4  4  7, Class: 0, CF: 0.5264447116029363, Fitness: 815
+ Rule_07:  2  2  2  1  3, Class: 0, CF: 0.5727238060283633, Fitness: 1
+ Rule_08: 13  8 12  2  6, Class: 0, CF: 0.9611587660573935, Fitness: 0
+ Rule_09:  7  1  7 11  3, Class: 0, CF: 0.7322236183328719, Fitness: 17
+ Rule_10: 12  8  6 12  2, Class: 0, CF: 0.8858709655791028, Fitness: 3
+ Rule_11:  7  3  1  4  6, Class: 1, CF: 0.13994503311763418, Fitness: 1
+ Rule_12: 11  1  2  1  1, Class: 0, CF: 0.35023768786102893, Fitness: 24
+ Rule_13:  1  4  8 12  7, Class: 0, CF: 0.24076285855758894, Fitness: 0
+ Rule_14:  4  1 11  7  2, Class: 0, CF: 0.893780075757638, Fitness: 46
+ Rule_15:  6  1  4 13  2, Class: 0, CF: 0.10324295240668446, Fitness: 0
+ Rule_16:  1 12 11  7 11, Class: 0, CF: 0.937897450428799, Fitness: 128
+ Rule_17:  2  4  6  3  2, Class: 0, CF: 0.8885505001491347, Fitness: 0
+ Rule_18:  4  4 13 11 11, Class: 0, CF: 0.5096897551168081, Fitness: 119
+ Rule_19:  8  4 13  4  2, Class: 1, CF: 0.34150654902150646, Fitness: 23
+ Rule_20:  8  2  2  4 12, Class: 0, CF: 0.531183472954964, Fitness: 0
+ Rule_21: 13  7 11  4  2, Class: 0, CF: 0.9910335641783146, Fitness: 1
+ Rule_22:  2  1 12  8 11, Class: 0, CF: 0.3054013754291529, Fitness: 1
+ Rule_23: 11  4  2  9  7, Class: 0, CF: 0.05500054077202665, Fitness: 0
+ Rule_24:  1  6 11 11  7, Class: 0, CF: 0.3396023034514164, Fitness: 4
+ Rule_25:  2  8  2 11  7, Class: 0, CF: 0.745144408988982, Fitness: 17
+ Rule_26:  4 11  5  1  7, Class: 0, CF: 0.22540397973112047, Fitness: 0
+ Rule_27: 12 12  2  2 11, Class: 0, CF: 0.2935895920222782, Fitness: 7
+ Rule_28: 11  7  2 11  1, Class: 0, CF: 0.5848143955431602, Fitness: 117
+ Rule_29: 11  5  1  7  6, Class: 0, CF: 0.8387089756060901, Fitness: 2
+
+------------------------------------------------------------------
+
+------------ pop_21 ------------
+ MissRate   : 26.89697717458359
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1112 33
+ 403 73
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8  1 12  2 11, Class: 0, CF: 0.8016447632414894, Fitness: 41
+ Rule_01: 11 11 12  4  1, Class: 1, CF: 0.1420037883360532, Fitness: 36
+ Rule_02:  2 11  4  5  3, Class: 1, CF: 0.0018807219400569508, Fitness: 0
+ Rule_03:  7  3 13 13  4, Class: 1, CF: 0.14959873331159268, Fitness: 13
+ Rule_04:  4  7  8 11  5, Class: 1, CF: 0.33354566936707997, Fitness: 8
+ Rule_05:  1  4  2  2 11, Class: 0, CF: 0.3104639168337697, Fitness: 215
+ Rule_06:  4 11  5 12 12, Class: 1, CF: 0.37957606649465836, Fitness: 49
+ Rule_07: 11  3  7  2  7, Class: 1, CF: 0.03986703261354596, Fitness: 0
+ Rule_08:  4  4  1  7  1, Class: 0, CF: 0.7630550909240064, Fitness: 599
+ Rule_09:  1  3  1  4  4, Class: 0, CF: 0.13201295464889173, Fitness: 5
+ Rule_10:  4  1 12  7 11, Class: 0, CF: 0.6984420504569033, Fitness: 113
+ Rule_11: 11  8  4  7  1, Class: 0, CF: 0.7932892365655352, Fitness: 127
+ Rule_12:  1  2  4 12 12, Class: 0, CF: 0.30888272711347287, Fitness: 55
+ Rule_13: 12  5 12 12  1, Class: 0, CF: 0.48256102467044815, Fitness: 8
+ Rule_14: 12  2 13  4 11, Class: 0, CF: 0.05245770345512324, Fitness: 0
+ Rule_15:  2  2  5  3 11, Class: 0, CF: 0.6009249532949141, Fitness: 12
+ Rule_16:  1  2  4 12  2, Class: 0, CF: 0.3457129087430204, Fitness: 55
+ Rule_17: 12  7 13  1  3, Class: 0, CF: 0.0900490765025228, Fitness: 0
+ Rule_18: 11  2  4  8  3, Class: 1, CF: 0.006494845931538373, Fitness: 0
+ Rule_19:  7  4  4 14 11, Class: 0, CF: 0.04951008425024983, Fitness: 0
+ Rule_20:  7 11  5  3  1, Class: 0, CF: 0.5462223564936113, Fitness: 69
+ Rule_21:  1  4 12  2  3, Class: 0, CF: 0.15961323077429967, Fitness: 40
+ Rule_22:  3 11  4  7  6, Class: 0, CF: 0.17550738968937973, Fitness: 0
+ Rule_23:  2  4 14  6  7, Class: 0, CF: 0.6928937966378872, Fitness: 6
+ Rule_24:  4  1 12 14  1, Class: 0, CF: 0.07180587879850253, Fitness: 1
+ Rule_25:  2 12  1  1  7, Class: 0, CF: 0.7707632310011339, Fitness: 33
+ Rule_26:  2 11  7 11 11, Class: 0, CF: 0.9190174737069137, Fitness: 121
+ Rule_27:  7 12  8  8 11, Class: 0, CF: 0.027799451494488148, Fitness: 0
+ Rule_28:  7  7  1 12  7, Class: 0, CF: 0.1374077924015633, Fitness: 6
+ Rule_29:  8  3  4  2  7, Class: 0, CF: 0.8081750748694352, Fitness: 9
+
+------------------------------------------------------------------
+
+------------ pop_22 ------------
+ MissRate   : 26.526835286859964
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1063 82
+ 346 128
+
+----------------------
+ Michigan Rules :
+ Rule_00:  7  7 13  6  4, Class: 0, CF: 0.45730841950062806, Fitness: 14
+ Rule_01:  1 12  2 11  1, Class: 0, CF: 0.6797968304170584, Fitness: 145
+ Rule_02: 11 12 13 12  8, Class: 1, CF: 0.44839451937405483, Fitness: 4
+ Rule_03:  8  7 12  3  2, Class: 0, CF: 0.921238024958042, Fitness: 5
+ Rule_04:  8  7  8  1  7, Class: 0, CF: 0.48954648494733766, Fitness: 38
+ Rule_05: 11 12  2  3  7, Class: 0, CF: 0.776824754539251, Fitness: 54
+ Rule_06:  3  1  4 12  2, Class: 0, CF: 0.053523005034452176, Fitness: 1
+ Rule_07:  8  4  7  2 11, Class: 0, CF: 0.9161295861104208, Fitness: 253
+ Rule_08: 11  1 13  1  1, Class: 0, CF: 0.40361248516310977, Fitness: 26
+ Rule_09:  8  5  1  8  7, Class: 0, CF: 0.6452295440342528, Fitness: 0
+ Rule_10: 11  7  8  4  4, Class: 1, CF: 0.010469193782888686, Fitness: 0
+ Rule_11:  1  3  1 12 12, Class: 0, CF: 0.05824513230192063, Fitness: 3
+ Rule_12:  7  1  2  8  7, Class: 1, CF: 0.008550785517734028, Fitness: 0
+ Rule_13: 11 11  2  4  8, Class: 1, CF: 0.2684029307060489, Fitness: 43
+ Rule_14:  7 12  1  8  2, Class: 1, CF: 0.08723102547452899, Fitness: 0
+ Rule_15:  7  2 13  2  5, Class: 1, CF: 0.8419210805777698, Fitness: 9
+ Rule_16:  4 12  8  3  6, Class: 0, CF: 0.504505847014284, Fitness: 0
+ Rule_17:  7  1  8 12 11, Class: 0, CF: 0.11237556219195088, Fitness: 25
+ Rule_18:  7  7  5 10  1, Class: 0, CF: 0.6715867399459101, Fitness: 1
+ Rule_19: 12  4 13  3  1, Class: 0, CF: 0.36529207261262675, Fitness: 0
+ Rule_20: 12  4  2 12  3, Class: 0, CF: 0.30753593763957776, Fitness: 9
+ Rule_21:  1  4 13  1 11, Class: 0, CF: 0.4432584615187374, Fitness: 136
+ Rule_22:  1 11  8 14  4, Class: 0, CF: 0.17982597085423957, Fitness: 15
+ Rule_23: 11 13  3  4  1, Class: 0, CF: 0.8321267039947161, Fitness: 10
+ Rule_24:  1  4  8  7  4, Class: 0, CF: 0.3703820796440125, Fitness: 65
+ Rule_25:  1  4  1 13  1, Class: 1, CF: 0.1606130820366779, Fitness: 112
+ Rule_26:  7  1  4  2  5, Class: 1, CF: 0.346976113838408, Fitness: 42
+ Rule_27: 12  2  7  7  4, Class: 0, CF: 0.8805167990871541, Fitness: 279
+ Rule_28:  1 13  1  7  7, Class: 0, CF: 0.8807988365596262, Fitness: 167
+ Rule_29:  4 12  2  4  4, Class: 0, CF: 0.31140961560724567, Fitness: 163
+
+------------------------------------------------------------------
+
+------------ pop_23 ------------
+ MissRate   : 23.812461443553364
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1069 76
+ 310 166
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8  1  3 12 11, Class: 0, CF: 0.9626541377974999, Fitness: 16
+ Rule_01:  7  1  2  9  4, Class: 1, CF: 0.0029269676035288406, Fitness: 0
+ Rule_02: 12  5 13 12  4, Class: 0, CF: 0.19907901406779582, Fitness: 0
+ Rule_03:  7 11  7  1  7, Class: 0, CF: 0.08549597983463508, Fitness: 0
+ Rule_04: 13  1  7  8 12, Class: 0, CF: 0.9668599341047553, Fitness: 9
+ Rule_05:  1  1  8  4  7, Class: 0, CF: 0.20461087881057005, Fitness: 72
+ Rule_06:  2  7  2  1  1, Class: 0, CF: 0.4557385428366365, Fitness: 160
+ Rule_07:  7  7  4  4  6, Class: 1, CF: 0.08807683674288969, Fitness: 49
+ Rule_08:  2 11 11  3  7, Class: 0, CF: 0.8922986786264415, Fitness: 53
+ Rule_09: 11  4  7 12 11, Class: 0, CF: 0.5203829906330817, Fitness: 37
+ Rule_10:  7  1 12  2  2, Class: 1, CF: 0.07078180105894982, Fitness: 5
+ Rule_11:  7  4  8  4  8, Class: 1, CF: 0.3735021082734944, Fitness: 188
+ Rule_12:  4 12  5  1  1, Class: 0, CF: 0.36935905570045, Fitness: 111
+ Rule_13:  3  1  8 13  7, Class: 1, CF: 0.01277178554738656, Fitness: 0
+ Rule_14:  4  2  7  5  2, Class: 1, CF: 0.1421234240869238, Fitness: 0
+ Rule_15:  7 11 13 10  6, Class: 0, CF: 0.6984916540353421, Fitness: 1
+ Rule_16:  4  8  4  4  7, Class: 0, CF: 0.6724968584190167, Fitness: 576
+ Rule_17: 12 13  5 12 11, Class: 0, CF: 0.1749562238716027, Fitness: 0
+ Rule_18: 11  1  4  2  1, Class: 0, CF: 0.030944996038993366, Fitness: 10
+ Rule_19:  7  1 13  4  7, Class: 0, CF: 0.20315790524763844, Fitness: 59
+ Rule_20:  7  1  3 12  2, Class: 0, CF: 0.620196492163182, Fitness: 7
+ Rule_21:  4 11  7  7  3, Class: 0, CF: 0.7699740492288212, Fitness: 118
+ Rule_22:  1  2 11 12  7, Class: 0, CF: 0.8698418242298305, Fitness: 70
+ Rule_23:  1  3  1  4  5, Class: 1, CF: 0.11115318221171044, Fitness: 0
+ Rule_24: 12  7 12 12  7, Class: 0, CF: 0.35120630374944883, Fitness: 21
+ Rule_25:  1  8  4 12  4, Class: 0, CF: 0.5607773307073889, Fitness: 26
+ Rule_26:  4  8  1  2  7, Class: 0, CF: 0.7166039930774304, Fitness: 21
+ Rule_27:  7  7  3 12  7, Class: 0, CF: 0.5054859890666563, Fitness: 2
+ Rule_28: 11  2  3  1 12, Class: 0, CF: 0.7652969068150297, Fitness: 10
+ Rule_29:  4  2  9  6  3, Class: 0, CF: 0.7019517233040432, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_24 ------------
+ MissRate   : 28.13078346699568
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1138 7
+ 449 27
+
+----------------------
+ Michigan Rules :
+ Rule_00: 12  8  1 11  1, Class: 0, CF: 0.8600706757729504, Fitness: 174
+ Rule_01:  7  8  8 11  7, Class: 0, CF: 0.7111323226116184, Fitness: 162
+ Rule_02:  2  4  1 11  4, Class: 0, CF: 0.8348114162923732, Fitness: 111
+ Rule_03: 13 12  7  3  2, Class: 0, CF: 0.9855339227961714, Fitness: 0
+ Rule_04:  1 13  2  2  2, Class: 0, CF: 0.6082053918678461, Fitness: 2
+ Rule_05:  7  1  2  8  9, Class: 1, CF: 0.3467159708592009, Fitness: 14
+ Rule_06:  4  7  7  4 12, Class: 0, CF: 0.4412234097096146, Fitness: 92
+ Rule_07:  4  1  8  2  2, Class: 1, CF: 0.11235569289297986, Fitness: 11
+ Rule_08:  3 13  4  1  6, Class: 0, CF: 0.6567144667257727, Fitness: 0
+ Rule_09:  8 12  2 11  7, Class: 0, CF: 0.6675121556741355, Fitness: 23
+ Rule_10: 12  2  2  2  8, Class: 1, CF: 0.2306425966512542, Fitness: 5
+ Rule_11:  1  8  7 12  3, Class: 0, CF: 0.8132843396709926, Fitness: 70
+ Rule_12: 11 11 12  7 10, Class: 0, CF: 0.26380438495677705, Fitness: 2
+ Rule_13: 12  4  3  2  3, Class: 0, CF: 0.8194884063305381, Fitness: 12
+ Rule_14:  7  4  8  2  4, Class: 0, CF: 0.023871799817084982, Fitness: 0
+ Rule_15:  2  7  4  4 11, Class: 0, CF: 0.5829074394431295, Fitness: 406
+ Rule_16:  1  7  4  1 12, Class: 0, CF: 0.13191077023158804, Fitness: 2
+ Rule_17:  4 12  6  6  2, Class: 0, CF: 0.7747505280565763, Fitness: 0
+ Rule_18: 11  4  1  7 12, Class: 0, CF: 0.4350423511346928, Fitness: 13
+ Rule_19: 12  3  4  4  7, Class: 0, CF: 0.15392269899204458, Fitness: 0
+ Rule_20:  2 12  1  4  2, Class: 0, CF: 0.569201959342307, Fitness: 10
+ Rule_21:  7 10 12  7  3, Class: 1, CF: 0.4233311756300022, Fitness: 4
+ Rule_22: 12  8  6  7 11, Class: 0, CF: 0.9351683797533057, Fitness: 3
+ Rule_23:  1  4  5  2  4, Class: 0, CF: 0.057523281066527154, Fitness: 0
+ Rule_24:  3 12 13  8  1, Class: 1, CF: 0.011807449685772076, Fitness: 0
+ Rule_25:  7  2 13  7  1, Class: 0, CF: 0.446879934022385, Fitness: 69
+ Rule_26:  2  4  4  4  1, Class: 0, CF: 0.5317421064426848, Fitness: 381
+ Rule_27:  1 11  7 11  8, Class: 0, CF: 0.14522941603794437, Fitness: 1
+ Rule_28:  7 13  4  3  4, Class: 0, CF: 0.9050095781271124, Fitness: 11
+ Rule_29:  1  4 12  2  1, Class: 0, CF: 0.15773156133705157, Fitness: 43
+
+------------------------------------------------------------------
+
+------------ pop_25 ------------
+ MissRate   : 29.36458975940777
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1145 0
+ 476 0
+
+----------------------
+ Michigan Rules :
+ Rule_00: 12  1  2  1 10, Class: 1, CF: 0.10631181855454308, Fitness: 0
+ Rule_01:  7  8 11  4  7, Class: 0, CF: 0.905112067681918, Fitness: 258
+ Rule_02:  7  4 12  2  2, Class: 1, CF: 0.010795883052977961, Fitness: 0
+ Rule_03:  8  2  4 11  4, Class: 0, CF: 0.8413807623588321, Fitness: 74
+ Rule_04: 11  4 13  4  4, Class: 0, CF: 0.21638558128325824, Fitness: 68
+ Rule_05:  8 13  1  7 11, Class: 0, CF: 0.8534753044076582, Fitness: 22
+ Rule_06:  2  4  8 12 11, Class: 0, CF: 0.3373898095854231, Fitness: 53
+ Rule_07:  7  8  2  7  3, Class: 0, CF: 0.7258348753923003, Fitness: 89
+ Rule_08:  4  1  2  1  7, Class: 0, CF: 0.47704793298711334, Fitness: 197
+ Rule_09:  4  7  4  3 11, Class: 0, CF: 0.6738499641094706, Fitness: 65
+ Rule_10:  4  1  4  2  4, Class: 0, CF: 0.2070549409612472, Fitness: 168
+ Rule_11: 12  4  8 11  7, Class: 0, CF: 0.46249306439116844, Fitness: 73
+ Rule_12:  7  2 11  2 11, Class: 0, CF: 0.7902428314904135, Fitness: 14
+ Rule_13: 11  8  6  4  3, Class: 0, CF: 0.8004319701276843, Fitness: 0
+ Rule_14:  4  3 13  7 12, Class: 1, CF: 0.16502717556981383, Fitness: 0
+ Rule_15:  4  2 11  2 12, Class: 0, CF: 0.8645219248141507, Fitness: 23
+ Rule_16: 14  3 12  3 11, Class: 0, CF: 1.0, Fitness: 0
+ Rule_17:  2  4  4  8  4, Class: 0, CF: 0.1274637649005942, Fitness: 0
+ Rule_18:  7  4  8  2  1, Class: 0, CF: 0.047683632755794236, Fitness: 14
+ Rule_19:  2 12  8 11  7, Class: 0, CF: 0.6083523485032343, Fitness: 24
+ Rule_20:  2  7 12  4 11, Class: 0, CF: 0.6019133263579141, Fitness: 341
+ Rule_21:  4  7  1  4  6, Class: 0, CF: 0.10547946712810785, Fitness: 0
+ Rule_22: 11  1  4  2  3, Class: 0, CF: 0.03398364452745106, Fitness: 0
+ Rule_23: 11  1  4  3  4, Class: 0, CF: 0.4106342825392968, Fitness: 30
+ Rule_24: 11  2  8  1  3, Class: 0, CF: 0.43842622567008727, Fitness: 5
+ Rule_25: 12  4  9  2  4, Class: 1, CF: 0.0812040894088657, Fitness: 0
+ Rule_26: 11  7  3 10 11, Class: 1, CF: 0.14650906311731626, Fitness: 0
+ Rule_27: 12  2 12  4  3, Class: 0, CF: 0.46292593356365386, Fitness: 38
+ Rule_28: 12  4  2  1 10, Class: 1, CF: 0.06794051210777874, Fitness: 0
+ Rule_29:  9  1 12  7  7, Class: 0, CF: 1.0, Fitness: 65
+
+------------------------------------------------------------------
+
+------------ pop_26 ------------
+ MissRate   : 26.09500308451573
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1134 11
+ 412 64
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4  2 11  8  7, Class: 0, CF: 0.7195263562205576, Fitness: 48
+ Rule_01:  2  4  4 12  7, Class: 0, CF: 0.6286600899820982, Fitness: 289
+ Rule_02:  1 13  4  3  2, Class: 0, CF: 0.899235326559119, Fitness: 0
+ Rule_03:  2  8 12 12 11, Class: 0, CF: 0.6591431908354277, Fitness: 38
+ Rule_04:  1  5  8  1  4, Class: 0, CF: 0.528796961464731, Fitness: 0
+ Rule_05:  3 12  5  3  2, Class: 0, CF: 0.6607008347588303, Fitness: 3
+ Rule_06:  7  4  8 11  4, Class: 0, CF: 0.5091773008778793, Fitness: 240
+ Rule_07:  5 11  1 11  4, Class: 0, CF: 0.998526667657814, Fitness: 65
+ Rule_08: 12  4  8  4 13, Class: 1, CF: 0.6294169736827699, Fitness: 75
+ Rule_09:  7  1  1  4  7, Class: 0, CF: 0.3751850549776452, Fitness: 184
+ Rule_10:  1  3  3  8  4, Class: 0, CF: 0.20970566536773583, Fitness: 0
+ Rule_11:  8  7  4  4  8, Class: 0, CF: 0.10876260565312101, Fitness: 0
+ Rule_12: 11  3  2  3 11, Class: 0, CF: 0.47698283349397097, Fitness: 7
+ Rule_13:  7  2  7  4  6, Class: 0, CF: 0.4352577502627746, Fitness: 27
+ Rule_14:  2 11  4  4 12, Class: 0, CF: 0.33163136202643684, Fitness: 35
+ Rule_15: 12 12 11  7  1, Class: 0, CF: 0.9491348335707324, Fitness: 127
+ Rule_16:  1  8  7 11  4, Class: 0, CF: 0.9451315343792532, Fitness: 83
+ Rule_17:  4 12  8  2  3, Class: 0, CF: 0.0817885006892154, Fitness: 10
+ Rule_18:  2  2  4 12  1, Class: 0, CF: 0.5670631627405778, Fitness: 14
+ Rule_19: 14  2  3 11  7, Class: 0, CF: 1.0, Fitness: 0
+ Rule_20:  4 12 12  8 11, Class: 0, CF: 0.25675252512918234, Fitness: 50
+ Rule_21:  2  7  4 12  2, Class: 0, CF: 0.3501749537119587, Fitness: 29
+ Rule_22:  2  7  5  6  4, Class: 0, CF: 0.42692903597218423, Fitness: 2
+ Rule_23: 11 11  6  8  7, Class: 0, CF: 0.23390202110113467, Fitness: 0
+ Rule_24:  7  4  1  6  2, Class: 0, CF: 0.43565598103612824, Fitness: 3
+ Rule_25:  7  3  2  4  7, Class: 0, CF: 0.009748423465732792, Fitness: 0
+ Rule_26:  1  2  1  6  2, Class: 0, CF: 0.526370527312948, Fitness: 0
+ Rule_27:  8  2  4  8  1, Class: 0, CF: 0.4543654860476034, Fitness: 13
+ Rule_28:  1  4  1  7  7, Class: 0, CF: 0.7672224831925043, Fitness: 204
+ Rule_29:  2  4  2 12  7, Class: 0, CF: 0.5118817491543086, Fitness: 75
+
+------------------------------------------------------------------
+
+------------ pop_27 ------------
+ MissRate   : 26.341764342998147
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1087 58
+ 369 107
+
+----------------------
+ Michigan Rules :
+ Rule_00:  7  8  2  4  7, Class: 0, CF: 0.6001877514314082, Fitness: 304
+ Rule_01: 12  4  7  7  7, Class: 0, CF: 0.9023255598761775, Fitness: 292
+ Rule_02:  7  2  4  8  2, Class: 1, CF: 0.04253960565129766, Fitness: 0
+ Rule_03:  4  2 11  4 11, Class: 0, CF: 0.8928018057873394, Fitness: 131
+ Rule_04:  2  7  7 11  7, Class: 0, CF: 0.9288500803791528, Fitness: 87
+ Rule_05:  4  3  9  3  2, Class: 0, CF: 0.3676572670528502, Fitness: 1
+ Rule_06: 13 12 12  8  1, Class: 0, CF: 0.9661685881510069, Fitness: 11
+ Rule_07: 11  1 13 13  4, Class: 1, CF: 0.09551224717543594, Fitness: 2
+ Rule_08:  7  2  5  2 12, Class: 0, CF: 0.008486970184048648, Fitness: 0
+ Rule_09:  4  8 13 11 11, Class: 0, CF: 0.4860010098866978, Fitness: 106
+ Rule_10:  8  1  1  2  7, Class: 0, CF: 0.828162837008666, Fitness: 31
+ Rule_11:  3  1  1  2  7, Class: 0, CF: 0.19853945180142163, Fitness: 63
+ Rule_12: 12  2  1 12  2, Class: 0, CF: 0.5564429709773973, Fitness: 16
+ Rule_13:  2  4  2  8  7, Class: 0, CF: 0.17300273505357033, Fitness: 16
+ Rule_14:  7  7  1 11  8, Class: 1, CF: 0.03910915298392559, Fitness: 0
+ Rule_15:  3  8  5  2  4, Class: 0, CF: 0.3721980288881297, Fitness: 0
+ Rule_16:  8  4  2  8  1, Class: 0, CF: 0.2103942060040358, Fitness: 1
+ Rule_17:  7  1 13  8  1, Class: 1, CF: 0.1483168078813406, Fitness: 159
+ Rule_18:  5  1 12 11  1, Class: 0, CF: 0.993684052393649, Fitness: 5
+ Rule_19:  2 12  7  7 12, Class: 0, CF: 0.8644319868871442, Fitness: 9
+ Rule_20: 11 12  1  3  1, Class: 0, CF: 0.7119608980451939, Fitness: 22
+ Rule_21:  7  2  9  1 12, Class: 0, CF: 0.28716358668013076, Fitness: 10
+ Rule_22:  4  4 13  3  5, Class: 1, CF: 0.7273831303708906, Fitness: 4
+ Rule_23:  1  2 12  4  2, Class: 0, CF: 0.27513593725992136, Fitness: 70
+ Rule_24: 12  5  6  2  3, Class: 0, CF: 0.8243643974849073, Fitness: 0
+ Rule_25: 13  4  7  7 11, Class: 0, CF: 0.987735493812854, Fitness: 76
+ Rule_26:  4  4 11  1  4, Class: 0, CF: 0.8921099774283514, Fitness: 85
+ Rule_27:  7  2  8 11  2, Class: 0, CF: 0.4915016806846082, Fitness: 44
+ Rule_28: 13  1  4  7  4, Class: 0, CF: 0.9864982321917106, Fitness: 71
+ Rule_29:  4 13  8  1 12, Class: 0, CF: 0.4870321188065563, Fitness: 5
+
+------------------------------------------------------------------
+
+------------ pop_28 ------------
+ MissRate   : 27.082048118445407
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1119 26
+ 413 63
+
+----------------------
+ Michigan Rules :
+ Rule_00:  2  4  4 12  1, Class: 0, CF: 0.546849879494518, Fitness: 215
+ Rule_01:  3 12  8 12  4, Class: 0, CF: 0.16137966096537415, Fitness: 0
+ Rule_02:  5  1  7  7  7, Class: 0, CF: 0.9955588530769095, Fitness: 140
+ Rule_03:  1 12 12  1  2, Class: 0, CF: 0.3581616412398778, Fitness: 20
+ Rule_04:  7  3  8 12  8, Class: 1, CF: 0.3683787108281604, Fitness: 23
+ Rule_05:  2  1 12  2  7, Class: 0, CF: 0.49554977604351746, Fitness: 79
+ Rule_06:  7 13  4 11 11, Class: 0, CF: 0.8820325060597491, Fitness: 49
+ Rule_07: 12  1  5  8  4, Class: 1, CF: 0.38307637933938965, Fitness: 56
+ Rule_08:  2  1  4  7  4, Class: 0, CF: 0.7210085312347205, Fitness: 142
+ Rule_09:  4  7  2  3  7, Class: 0, CF: 0.6031111608759301, Fitness: 177
+ Rule_10:  7  2  5  4  2, Class: 0, CF: 0.09210430796902891, Fitness: 0
+ Rule_11: 11  1  1  4 11, Class: 0, CF: 0.3061204806693645, Fitness: 18
+ Rule_12:  1  8 13 12  8, Class: 1, CF: 0.3572818617510052, Fitness: 4
+ Rule_13: 11  7  4  7  7, Class: 0, CF: 0.32261241399718643, Fitness: 61
+ Rule_14:  2  4  8 12  7, Class: 0, CF: 0.3262308821754467, Fitness: 35
+ Rule_15:  2  4 12  7  3, Class: 0, CF: 0.7967309254516346, Fitness: 12
+ Rule_16:  1  1 12  2 11, Class: 0, CF: 0.23616240011390044, Fitness: 68
+ Rule_17:  3  4  4  8  2, Class: 1, CF: 0.11582842149209682, Fitness: 6
+ Rule_18:  1 11  4  1  3, Class: 0, CF: 0.20146271814633687, Fitness: 2
+ Rule_19:  4  6  2  5 11, Class: 0, CF: 0.4350583464151756, Fitness: 1
+ Rule_20:  4  2  4  1  1, Class: 0, CF: 0.569819928815158, Fitness: 191
+ Rule_21:  7  4  3  4  4, Class: 0, CF: 0.7680553210255749, Fitness: 86
+ Rule_22:  4  1  5  6  3, Class: 0, CF: 0.6259351372880402, Fitness: 2
+ Rule_23:  1 11  3  1  4, Class: 0, CF: 0.43009154250980486, Fitness: 4
+ Rule_24:  7 13  1  7  4, Class: 0, CF: 0.8643116361298067, Fitness: 187
+ Rule_25:  8 13  1  7  3, Class: 0, CF: 0.8514599634576897, Fitness: 5
+ Rule_26: 13  2  8 12 11, Class: 0, CF: 0.9700917794732093, Fitness: 1
+ Rule_27:  2 11  4  1  4, Class: 0, CF: 0.5131162434013246, Fitness: 37
+ Rule_28:  3  7  8  4  3, Class: 0, CF: 0.07634092103813228, Fitness: 0
+ Rule_29:  3 11 12 12  4, Class: 1, CF: 0.16236261108813443, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_29 ------------
+ MissRate   : 28.994447871684148
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1142 3
+ 467 9
+
+----------------------
+ Michigan Rules :
+ Rule_00:  1  4  4  7  1, Class: 0, CF: 0.6373655247316354, Fitness: 317
+ Rule_01:  2  1  1  1 11, Class: 0, CF: 0.749721160682215, Fitness: 109
+ Rule_02:  7  1  2  8 12, Class: 1, CF: 0.18046466566658914, Fitness: 6
+ Rule_03:  4  3  4 12 12, Class: 0, CF: 0.04792352019149981, Fitness: 0
+ Rule_04: 12 11  4 12 12, Class: 1, CF: 0.11773261938294999, Fitness: 0
+ Rule_05:  1  2  4  4  6, Class: 0, CF: 0.24801531463366255, Fitness: 5
+ Rule_06:  4  4  4  4  4, Class: 0, CF: 0.3951820004212081, Fitness: 367
+ Rule_07:  7  1  4  8 11, Class: 0, CF: 0.010338216406427847, Fitness: 0
+ Rule_08: 11  4 11  8 12, Class: 0, CF: 0.3070875500212913, Fitness: 0
+ Rule_09:  4 12 12  1 12, Class: 0, CF: 0.4267046340439071, Fitness: 0
+ Rule_10: 12  4  3 11  7, Class: 0, CF: 0.9582171828643258, Fitness: 24
+ Rule_11:  8  1 11  4  3, Class: 0, CF: 0.9681608732333066, Fitness: 1
+ Rule_12:  1  1  1  2 11, Class: 0, CF: 0.3721554966147369, Fitness: 31
+ Rule_13: 11  8  2  8  7, Class: 0, CF: 0.32949195991426294, Fitness: 7
+ Rule_14:  3 12 11  1  1, Class: 0, CF: 0.7697634348250093, Fitness: 0
+ Rule_15:  7 12  1  9  3, Class: 1, CF: 0.2004857029676652, Fitness: 6
+ Rule_16:  4  5  4  8  2, Class: 0, CF: 0.4673416764325393, Fitness: 0
+ Rule_17:  4  4  7  4 11, Class: 0, CF: 0.7794276265863006, Fitness: 520
+ Rule_18:  7 11  4  4  4, Class: 1, CF: 0.12759288466117402, Fitness: 0
+ Rule_19:  1  5 12  7  7, Class: 0, CF: 0.7444840229519487, Fitness: 13
+ Rule_20:  4 13  2  3 11, Class: 0, CF: 0.7706738784016527, Fitness: 16
+ Rule_21:  1  4  8 12 11, Class: 0, CF: 0.25449676451390923, Fitness: 58
+ Rule_22: 13  3  4  7  3, Class: 0, CF: 0.9975052520662424, Fitness: 15
+ Rule_23: 11  2  2  4  2, Class: 0, CF: 0.22970928200753904, Fitness: 2
+ Rule_24:  7  4 11  1  2, Class: 0, CF: 0.8091033491710913, Fitness: 37
+ Rule_25:  2  5  8  4  4, Class: 0, CF: 0.40263052456361614, Fitness: 0
+ Rule_26:  2 12  4  4 10, Class: 1, CF: 0.18613951317831456, Fitness: 0
+ Rule_27:  3  4  8  4  7, Class: 0, CF: 0.3141301892666737, Fitness: 3
+ Rule_28: 12  2  8  2 11, Class: 0, CF: 0.14066674934463697, Fitness: 0
+ Rule_29:  4  1 12  2  7, Class: 0, CF: 0.3155889761512025, Fitness: 84
+
+------------------------------------------------------------------
+
+------------ pop_30 ------------
+ MissRate   : 26.21838371375694
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1128 17
+ 408 68
+
+----------------------
+ Michigan Rules :
+ Rule_00:  8 12  4 11  8, Class: 0, CF: 0.7270948250518152, Fitness: 15
+ Rule_01: 12  4 12  8 11, Class: 0, CF: 0.22041752549272187, Fitness: 70
+ Rule_02:  7  1  2  2  4, Class: 0, CF: 0.03903327988353977, Fitness: 7
+ Rule_03:  4  4  2  8  6, Class: 1, CF: 0.1378439339877109, Fitness: 9
+ Rule_04: 12  4  2  7  1, Class: 0, CF: 0.5320033589777375, Fitness: 269
+ Rule_05:  7  3  4  4  6, Class: 1, CF: 0.16765132238035862, Fitness: 6
+ Rule_06:  4  7  9  8 11, Class: 1, CF: 0.047441633476622114, Fitness: 0
+ Rule_07:  8 12  4  1  1, Class: 0, CF: 0.7364501560590142, Fitness: 241
+ Rule_08:  7  1  5  1  4, Class: 0, CF: 0.29622467304636735, Fitness: 40
+ Rule_09: 12  7  4  5  5, Class: 1, CF: 0.6486775241784839, Fitness: 27
+ Rule_10:  3  1  8  4  4, Class: 0, CF: 0.06650636332853543, Fitness: 0
+ Rule_11:  1  1 11  8  4, Class: 0, CF: 0.4429879834629741, Fitness: 29
+ Rule_12:  4  4  7  1  5, Class: 0, CF: 0.3856808124844373, Fitness: 6
+ Rule_13: 11  2  7 13  2, Class: 1, CF: 0.20727738805181173, Fitness: 0
+ Rule_14:  1  2  8  1 12, Class: 0, CF: 0.20192639489001674, Fitness: 2
+ Rule_15: 12  8  4  2 11, Class: 0, CF: 0.5786129379987357, Fitness: 136
+ Rule_16:  1  7  2  7  4, Class: 0, CF: 0.36074690247029684, Fitness: 210
+ Rule_17: 12  3  2 12  1, Class: 1, CF: 0.16952144525300583, Fitness: 0
+ Rule_18:  1  7  2  1  3, Class: 0, CF: 0.36703471683208155, Fitness: 158
+ Rule_19:  4  7  8 12  1, Class: 1, CF: 0.05601596421615729, Fitness: 0
+ Rule_20:  4  4  9  3  2, Class: 0, CF: 0.5230402225055282, Fitness: 0
+ Rule_21:  7  7 12 12  4, Class: 1, CF: 0.06076024250594725, Fitness: 17
+ Rule_22:  4  4  1  2 13, Class: 1, CF: 0.25488834576225927, Fitness: 26
+ Rule_23: 12  4  8  1  4, Class: 0, CF: 0.15262304313752828, Fitness: 8
+ Rule_24: 12  8  4  8  1, Class: 0, CF: 0.30936608631455476, Fitness: 13
+ Rule_25:  1  3  4  4  3, Class: 0, CF: 0.08335536583712422, Fitness: 4
+ Rule_26:  4  8  3  4  1, Class: 0, CF: 0.8988224480745635, Fitness: 264
+ Rule_27: 12  7 11 12  2, Class: 0, CF: 0.7802488327911541, Fitness: 10
+ Rule_28:  7  4 14  3  1, Class: 0, CF: 0.7487264803866982, Fitness: 54
+ Rule_29:  2  2 12  5 13, Class: 1, CF: 0.6106733403843507, Fitness: 0
+
+------------------------------------------------------------------
+
+------------ pop_31 ------------
+ MissRate   : 28.932757557063542
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1132 13
+ 456 20
+
+----------------------
+ Michigan Rules :
+ Rule_00:  4 11  7  2  8, Class: 1, CF: 0.10705767446681103, Fitness: 5
+ Rule_01:  2 12 12  4  7, Class: 0, CF: 0.6422430126882497, Fitness: 137
+ Rule_02: 12 13 11  7  1, Class: 0, CF: 0.9497068316052002, Fitness: 113
+ Rule_03:  7 12  4  1  8, Class: 1, CF: 0.13393772304940765, Fitness: 13
+ Rule_04: 12  1  3  4  3, Class: 0, CF: 0.8580513933775478, Fitness: 3
+ Rule_05:  4  2 12  4  7, Class: 0, CF: 0.5163965924518954, Fitness: 175
+ Rule_06:  4  7  4  4 12, Class: 0, CF: 0.12993728816760042, Fitness: 82
+ Rule_07:  1  2  7  3  7, Class: 0, CF: 0.881948898058458, Fitness: 17
+ Rule_08: 12  4 11  3  3, Class: 0, CF: 0.9526408700009177, Fitness: 1
+ Rule_09:  1  7  1  4  1, Class: 0, CF: 0.2299199174037907, Fitness: 50
+ Rule_10:  4  1  7 13  2, Class: 1, CF: 0.14017424671283474, Fitness: 12
+ Rule_11:  7  7  1  8  7, Class: 1, CF: 0.07760315372292226, Fitness: 1
+ Rule_12: 12  3  4  7 11, Class: 0, CF: 0.4797348209201715, Fitness: 9
+ Rule_13:  6  7 11  1  1, Class: 0, CF: 0.0058471394934090926, Fitness: 0
+ Rule_14:  4  1 11 12 12, Class: 0, CF: 0.7647100213348099, Fitness: 31
+ Rule_15:  2 13  1  7  7, Class: 0, CF: 0.8747792369692426, Fitness: 4
+ Rule_16:  7 11  8  9  7, Class: 0, CF: 0.1937160378813474, Fitness: 11
+ Rule_17:  7  3 12  3  2, Class: 0, CF: 0.028590233983329716, Fitness: 1
+ Rule_18:  4  4  8 11  1, Class: 0, CF: 0.5147563949764945, Fitness: 261
+ Rule_19: 12  4  8  4  6, Class: 1, CF: 0.04222212740164999, Fitness: 0
+ Rule_20: 12 12 11  4  6, Class: 0, CF: 0.855679142042856, Fitness: 1
+ Rule_21:  1  4 11  7  7, Class: 0, CF: 0.9208292839274476, Fitness: 196
+ Rule_22: 12  4  1  8  7, Class: 0, CF: 0.2683095351986158, Fitness: 7
+ Rule_23:  7  2  5  1  4, Class: 0, CF: 0.3770462349032885, Fitness: 64
+ Rule_24:  4  8  4  2  1, Class: 0, CF: 0.5327269330418534, Fitness: 108
+ Rule_25:  4  4 12  2  1, Class: 0, CF: 0.24455835931072656, Fitness: 144
+ Rule_26:  9  7 11  2  6, Class: 0, CF: 1.0, Fitness: 0
+ Rule_27:  3  7  2 13 10, Class: 1, CF: 0.2819962446508353, Fitness: 2
+ Rule_28:  1 11  5  1  3, Class: 0, CF: 0.3364806266680964, Fitness: 6
+ Rule_29:  8  4  7  7  3, Class: 0, CF: 0.9583211445803592, Fitness: 167
+
+------------------------------------------------------------------
+
+------------ pop_32 ------------
+ MissRate   : 26.341764342998147
+ RuleNum    : 30
+ RuleLength : 150
+ Rank       : 0
+ Crowding   : 0.0
+----------------------
+ Confusion Matrix :
+
+ 1126 19
+ 408 68
+
+----------------------
+ Michigan Rules :
+ Rule_00:  7  1  5  8  1, Class: 1, CF: 0.11951899450648984, Fitness: 8
+ Rule_01:  4  2  7  2 11, Class: 0, CF: 0.7138016967665523, Fitness: 134
+ Rule_02: 11  4  2  3  1, Class: 0, CF: 0.6987989444853429, Fitness: 116
+ Rule_03:  1  1  4  7 11, Class: 0, CF: 0.6406881062458841, Fitness: 47
+ Rule_04:  5  4  7  8 11, Class: 0, CF: 0.9950287907177475, Fitness: 15
+ Rule_05:  7  2 11  4 11, Class: 0, CF: 0.8480134565139309, Fitness: 179
+ Rule_06:  4 12  2 12  8, Class: 1, CF: 0.29431255155451175, Fitness: 68
+ Rule_07:  7  1  9  3  4, Class: 0, CF: 0.5947387081903934, Fitness: 12
+ Rule_08:  8  4  2  4  4, Class: 0, CF: 0.5333187190008782, Fitness: 78
+ Rule_09:  2 12  8  5 11, Class: 1, CF: 0.1331381795000085, Fitness: 0
+ Rule_10: 12 12  4 11  7, Class: 0, CF: 0.7459778892279308, Fitness: 149
+ Rule_11:  1 11  7  7 11, Class: 0, CF: 0.6485022770255189, Fitness: 4
+ Rule_12:  1  7  4  7  1, Class: 0, CF: 0.47827349452847034, Fitness: 93
+ Rule_13:  8 13 11  7  1, Class: 0, CF: 0.943681497499054, Fitness: 67
+ Rule_14:  4  1 13 12  3, Class: 1, CF: 0.12769502980050684, Fitness: 0
+ Rule_15: 12  4  4  3  7, Class: 0, CF: 0.731108630350507, Fitness: 22
+ Rule_16:  4  7  5  4  4, Class: 1, CF: 0.07150834755287261, Fitness: 3
+ Rule_17:  1  7  1  7 11, Class: 0, CF: 0.6464177937075091, Fitness: 7
+ Rule_18:  2  1  2  5  1, Class: 1, CF: 0.09998050037565354, Fitness: 0
+ Rule_19:  8 12 13 12  4, Class: 1, CF: 0.3526275632654363, Fitness: 0
+ Rule_20: 11 12 13 12 12, Class: 0, CF: 0.07810190460888666, Fitness: 0
+ Rule_21: 12  4  2  2  1, Class: 0, CF: 0.16252440552049574, Fitness: 38
+ Rule_22:  7 12  1  7 13, Class: 0, CF: 0.10943486265263713, Fitness: 3
+ Rule_23:  1 12  2  4 11, Class: 0, CF: 0.4612751574152172, Fitness: 182
+ Rule_24:  2  4 13  7  1, Class: 0, CF: 0.3305520560510449, Fitness: 0
+ Rule_25:  4  7  4  7 11, Class: 0, CF: 0.6595429777519164, Fitness: 324
+ Rule_26:  8 12 12 12 11, Class: 0, CF: 0.8178794957252491, Fitness: 44
+ Rule_27:  7  7 13  3  3, Class: 0, CF: 0.6604360200891498, Fitness: 16
+ Rule_28:  1 10 11  7 11, Class: 0, CF: 0.508178023661935, Fitness: 4
+ Rule_29: 12  7  1  2 10, Class: 1, CF: 0.2226077373228299, Fitness: 8
+
+------------------------------------------------------------------
+

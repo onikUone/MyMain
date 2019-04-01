@@ -306,6 +306,10 @@ public class PopulationManager implements Serializable{
 		return this.emoType;
 	}
 
+	public int getDataIdx() {
+		return this.dataIdx;
+	}
+
 	public void setIslandPopNum(int _popNum) {
 		this.islandPopNum = _popNum;
 	}

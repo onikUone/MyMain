@@ -35,7 +35,7 @@ public class Settings {
 	int seed = 2019;	//乱数シード値
 	int preDivNum = 1;	//プレサンプリングの分割数
 	boolean isOnceExe = true;	//CVの試行終了タイミング（true:1回ずつ試行を終了させる）
-	String saveDir = "default";	//データ保存先ディレクトリ名
+//	String saveDir = "default";	//データ保存先ディレクトリ名
 	int islandNum = 1;	//島数
 	int migrationItv = 100;	//最良個体 移住間隔
 	int rotationItv = 100;	//部分データ 交換間隔 (=部分個体群 移住間隔)
@@ -71,9 +71,9 @@ public class Settings {
 		calclationType = Integer.parseInt(args[0]);
 		//コマンドライン引数が足りているかの確認
 		if(calclationType == 0) {
-			CommandLineFunc.lessArgs(args,  17);
+			CommandLineFunc.lessArgs(args,  16);
 		}else if(calclationType == 1) {
-			CommandLineFunc.lessArgs(args, 20);
+			CommandLineFunc.lessArgs(args, 19);
 		}
 		//基本設定
 		dataName = args[1];
@@ -87,9 +87,9 @@ public class Settings {
 		seed = Integer.parseInt(args[9]);
 		preDivNum = Integer.parseInt(args[10]);
 		isOnceExe = Boolean.parseBoolean(args[11]);
-		saveDir = args[12];
-		migrationItv = Integer.parseInt(args[13]);
-		rotationItv = Integer.parseInt(args[14]);
+//		saveDir = args[12];
+		migrationItv = Integer.parseInt(args[12]);
+		rotationItv = Integer.parseInt(args[13]);
 
 
 		//個別設定
@@ -104,24 +104,24 @@ public class Settings {
 	//methods - メンバメソッド
 	// calclationType == 0 :Single Nodeの時の設定
 	void setSingleNode(String args[]) {
-		parallelCores = Integer.parseInt(args[15]);
+		parallelCores = Integer.parseInt(args[14]);
 		forkJoinPool = new ForkJoinPool(parallelCores);
-		islandNum = Integer.parseInt(args[16]);
+		islandNum = Integer.parseInt(args[15]);
 	}
 	//calclationType == 1 :Apach Sparkの時の設定
 	void setSimpleSocket(String args[]) {
 
-		isDistributed = Boolean.parseBoolean(args[15]);
-		dirLocation = args[16];
-		serverNum = Integer.parseInt(args[17]);
-		portNum = Integer.parseInt(args[18]);
+		isDistributed = Boolean.parseBoolean(args[14]);
+		dirLocation = args[15];
+		serverNum = Integer.parseInt(args[16]);
+		portNum = Integer.parseInt(args[17]);
 		//島の分割数 or データ分割数
-		islandNum = Integer.parseInt(args[19]);
+		islandNum = Integer.parseInt(args[18]);
 
 		nodeNames = new ArrayList<String>();
 		//nodeNamesの取得
 		for(int i = 0; i < serverNum; i++) {
-			nodeNames.add(args[i + 20]);
+			nodeNames.add(args[i + 19]);
 		}
 		//サーバリストの作成
 		serverList = new InetSocketAddress[nodeNames.size()];

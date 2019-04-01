@@ -63,6 +63,8 @@ public class Consts {
 	public static final String SOLUTION = "solution";
 	public static final String LOGS = "logs";
 	public static final String LOGS_READABLE = "logs_readable";
+	public static final String DATA = "data";
+	public static final String TIMES = "times";
 	public static final String OTHERS = "write";
 
 	public String getStaticValues() {

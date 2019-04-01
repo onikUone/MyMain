@@ -48,20 +48,20 @@ public class Output {
 	//物理的にディレクトリ作成
 	public static void makeDirRule(String dir) {
 		String sep = File.separator;
-		String path = dir + sep + Consts.RULESET;
+//		String path = dir + sep + Consts.RULESET;
+//		File newdir = new File(path);
+//		newdir.mkdirs();
+//
+//		path = dir + sep + Consts.VECSET;
+//		newdir = new File(path);
+//		newdir.mkdirs();
+//
+//		path = dir + sep + Consts.SOLUTION;
+//		newdir = new File(path);
+//		newdir.mkdirs();
+
+		String path = dir + sep + Consts.OTHERS;
 		File newdir = new File(path);
-		newdir.mkdirs();
-
-		path = dir + sep + Consts.VECSET;
-		newdir = new File(path);
-		newdir.mkdirs();
-
-		path = dir + sep + Consts.SOLUTION;
-		newdir = new File(path);
-		newdir.mkdirs();
-
-		path = dir + sep + Consts.OTHERS;
-		newdir = new File(path);
 		newdir.mkdirs();
 
 		path = dir + sep + Consts.LOGS;
@@ -69,6 +69,14 @@ public class Output {
 		newdir.mkdirs();
 
 		path = dir + sep + Consts.LOGS_READABLE;
+		newdir = new File(path);
+		newdir.mkdirs();
+
+		path = dir + sep + Consts.DATA;
+		newdir = new File(path);
+		newdir.mkdirs();
+
+		path = dir + sep + Consts.TIMES;
 		newdir = new File(path);
 		newdir.mkdirs();
 	}
