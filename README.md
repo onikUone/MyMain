@@ -14,7 +14,6 @@
  + seed : int
  + preDivNum : int
  + isOnceExe : boolean
- + Save Directory : String
  + Migration Interval : int
  + Rotation Interval : int
 
